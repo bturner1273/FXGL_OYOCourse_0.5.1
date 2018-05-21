@@ -1,0 +1,140 @@
+15:27:18.610 [JavaFX Application Thread] DEBUG GameApplication      - Logger initialized
+15:27:18.616 [JavaFX Application Thread] DEBUG MainWindow           - Creating a JavaFX scene
+15:27:18.698 [JavaFX Application Thread] DEBUG MainWindow           - Target settings size: 800.0 x 400.0
+15:27:18.698 [JavaFX Application Thread] DEBUG MainWindow           - Scaled scene size:    800.0 x 400.0
+15:27:18.698 [JavaFX Application Thread] DEBUG MainWindow           - Scaled ratio: (1.0, 1.0)
+15:27:18.703 [JavaFX Application Thread] DEBUG GameApplication      - Starting FXGL
+15:27:18.715 [JavaFX Application Thread] INFO  FXGL                 - FXGL-0.5.1 on DESKTOP
+15:27:18.715 [JavaFX Application Thread] INFO  FXGL                 - Source code and latest versions at: https://github.com/AlmasB/FXGL
+15:27:18.715 [JavaFX Application Thread] INFO  FXGL                 -              Join the FXGL chat at: https://gitter.im/AlmasB/FXGL
+15:27:18.721 [JavaFX Application Thread] DEBUG FS                   - Loaded DesktopFSService
+15:27:18.721 [JavaFX Application Thread] DEBUG FXGL                 - Loading FXGL system data
+15:27:18.729 [JavaFX Application Thread] DEBUG DesktopFSService     - Reading from: system\fxgl.bundle
+15:27:18.737 [JavaFX Application Thread] DEBUG Bundle               - Logging bundle: FXGL
+15:27:18.738 [JavaFX Application Thread] DEBUG Bundle               - FXGL.offline.timer.version.check=2018-05-16T18:22:51.838
+15:27:18.765 [JavaFX Application Thread] DEBUG GameApplication      - FXGL started
+15:27:18.765 [JavaFX Application Thread] DEBUG GameApplication      - Logging game settings
+Title: FlappyBird
+Version: 0.2.0
+Width: 800
+Height: 400
+Fullscreen: false
+Intro: false
+Menus: false
+Profiling: false
+Single step:false
+App Mode: DEVELOPER
+Menu Key: ESCAPE
+Stage Style: DECORATED
+Scene Factory: class com.almasb.fxgl.scene.SceneFactory
+Dialog Factory: class com.almasb.fxgl.ui.FXGLDialogFactory
+UI Factory: class com.almasb.fxgl.ui.FXGLUIFactory
+Notification Service: class com.almasb.fxgl.gameplay.notification.XboxNotificationView
+Exception Handler: class com.almasb.fxgl.app.FXGLExceptionHandler
+15:27:18.766 [JavaFX Application Thread] DEBUG GameApplication      - Configuring GameApplication
+15:27:18.766 [JavaFX Application Thread] DEBUG GameApplication      - Initializing state machine and application states
+15:27:18.778 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from disk: /assets/ui/cursors/fxgl_default.png
+15:27:18.797 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from disk: /assets/ui/cursors/fxgl_default.png
+15:27:18.814 [JavaFX Application Thread] DEBUG FXGLAssets           - Loading FXGLAssets
+15:27:18.840 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from disk: /assets/ui/fonts/VarelaRound-Regular.ttf
+15:27:18.965 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from disk: /assets/ui/fonts/lucida_console.ttf
+15:27:18.974 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from disk: /assets/ui/css/fxgl_dark.css
+15:27:18.999 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from disk: /assets/ui/cursors/fxgl_default.png
+15:27:19.024 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from disk: /assets/ui/cursors/fxgl_default.png
+15:27:19.038 [JavaFX Application Thread] DEBUG GameScene            - Game scene initialized: 800x400
+15:27:19.041 [JavaFX Application Thread] DEBUG GameWorld            - Game world initialized
+15:27:19.080 [JavaFX Application Thread] DEBUG PhysicsWorld         - Physics world initialized: appHeight=400, physics.ppm=50.0
+15:27:19.094 [JavaFX Application Thread] DEBUG Input                - Registered new binding: Pause - Esc
+15:27:19.108 [JavaFX Application Thread] DEBUG Input                - Clearing active input actions
+15:27:19.140 [JavaFX Application Thread] DEBUG AppStateMachine      - StartupState -> StartupState
+15:27:19.143 [JavaFX Application Thread] INFO  GameApplication      - Game configuration took:  0.377 sec
+15:27:19.146 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from disk: /assets/textures/fxgl_icon.png
+15:27:19.160 [JavaFX Application Thread] DEBUG MainWindow           - Opening main window
+15:27:19.234 [JavaFX Application Thread] DEBUG MainWindow           - Window border size: (14.66668701171875, 37.333343505859375)
+15:27:19.234 [JavaFX Application Thread] DEBUG MainWindow           - Scaled size: 800.0 x 400.0
+15:27:19.235 [JavaFX Application Thread] DEBUG MainWindow           - Scaled ratio: (1.0, 1.0)
+15:27:19.235 [JavaFX Application Thread] DEBUG MainWindow           - Scene size: 800.0 x 400.0
+15:27:19.235 [JavaFX Application Thread] DEBUG MainWindow           - Stage size: 814.6666870117188 x 437.3333435058594
+15:27:19.235 [JavaFX Application Thread] DEBUG GameApplication      - Running preInit()
+15:27:19.238 [JavaFX Application Thread] DEBUG Input                - Registered new binding: Screenshot - P
+15:27:19.238 [JavaFX Application Thread] DEBUG Input                - Registered new binding: Dev Options - CTRL+0
+15:27:19.239 [JavaFX Application Thread] DEBUG Input                - Registered new binding: System info dump - CTRL+9
+15:27:19.239 [JavaFX Application Thread] DEBUG Input                - Registered new binding: Restart - CTRL+R
+15:27:19.239 [JavaFX Application Thread] DEBUG Input                - Registered new binding: flap - Space
+15:27:19.266 [JavaFX Application Thread] DEBUG GameApplication      - Starting main loop
+15:27:19.273 [JavaFX Application Thread] DEBUG StartupState         - STARTUP
+15:27:19.273 [JavaFX Application Thread] DEBUG GameApplication      - Starting new game
+15:27:19.273 [JavaFX Application Thread] DEBUG Input                - Clearing active input actions
+15:27:19.281 [JavaFX Application Thread] DEBUG AppStateMachine      - StartupState -> LoadingState
+15:27:19.286 [FXGL Background Thread 1 ] DEBUG InitAppTask          - Clearing previous game
+15:27:19.286 [FXGL Background Thread 1 ] DEBUG GameWorld            - Clearing game world
+15:27:19.286 [FXGL Background Thread 1 ] DEBUG PhysicsWorld         - Clearing physics world
+15:27:19.286 [FXGL Background Thread 1 ] DEBUG GameScene            - Clearing game scene
+15:27:19.288 [FXGL Background Thread 1 ] DEBUG InitAppTask          - Initializing Game
+15:27:19.309 [FXGL Background Thread 1 ] DEBUG AssetLoader          - Loading from disk: /assets/textures/FlappyPort/flappybird_fly_sheet.png
+15:27:19.377 [FXGL Background Thread 1 ] DEBUG GameScene            - Creating render group for layer: DEFAULT(100000)
+15:27:19.382 [FXGL Background Thread 1 ] DEBUG InitAppTask          - Initializing Physics
+15:27:19.383 [FXGL Background Thread 1 ] DEBUG InitAppTask          - Initializing UI
+15:27:19.383 [FXGL Background Thread 1 ] DEBUG AssetLoader          - Loading from disk: /assets/textures/FlappyPort/background.png
+15:27:19.389 [FXGL Background Thread 1 ] DEBUG InitAppTask          - Initialization Complete
+15:27:19.389 [FXGL Background Thread 1 ] INFO  InitAppTask          - Game initialization took: 0.103 sec
+15:27:19.401 [JavaFX Application Thread] DEBUG Input                - Clearing active input actions
+15:27:19.406 [JavaFX Application Thread] DEBUG AppStateMachine      - LoadingState -> PlayState
+15:27:19.750 [JavaFX Application Thread] DEBUG Input                - Mocking key release: Space
+15:27:20.248 [JavaFX Application Thread] DEBUG Input                - Mocking key release: Space
+15:27:20.280 [JavaFX Application Thread] DEBUG Input                - Mocking key release: Space
+15:27:20.328 [JavaFX Application Thread] DEBUG Input                - Mocking key release: Space
+15:27:20.347 [JavaFX Application Thread] DEBUG Input                - Mocking key release: Space
+15:27:20.379 [JavaFX Application Thread] DEBUG Input                - Mocking key release: Space
+15:27:20.413 [JavaFX Application Thread] DEBUG Input                - Mocking key release: Space
+15:27:20.446 [JavaFX Application Thread] DEBUG Input                - Mocking key release: Space
+15:27:20.480 [JavaFX Application Thread] DEBUG Input                - Mocking key release: Space
+15:27:20.513 [JavaFX Application Thread] DEBUG Input                - Mocking key release: Space
+15:27:20.546 [JavaFX Application Thread] DEBUG Input                - Mocking key release: Space
+15:27:20.579 [JavaFX Application Thread] DEBUG Input                - Mocking key release: Space
+15:27:20.612 [JavaFX Application Thread] DEBUG Input                - Mocking key release: Space
+15:27:20.645 [JavaFX Application Thread] DEBUG Input                - Mocking key release: Space
+15:27:20.679 [JavaFX Application Thread] DEBUG Input                - Mocking key release: Space
+15:27:20.712 [JavaFX Application Thread] DEBUG Input                - Mocking key release: Space
+15:27:20.745 [JavaFX Application Thread] DEBUG Input                - Mocking key release: Space
+15:27:20.775 [JavaFX Application Thread] DEBUG Input                - Mocking key release: Space
+15:27:20.808 [JavaFX Application Thread] DEBUG Input                - Mocking key release: Space
+15:27:20.841 [JavaFX Application Thread] DEBUG Input                - Mocking key release: Space
+15:27:20.879 [JavaFX Application Thread] DEBUG Input                - Mocking key release: Space
+15:27:20.916 [JavaFX Application Thread] DEBUG Input                - Mocking key release: Space
+15:27:20.945 [JavaFX Application Thread] DEBUG Input                - Mocking key release: Space
+15:27:20.978 [JavaFX Application Thread] DEBUG Input                - Mocking key release: Space
+15:27:21.012 [JavaFX Application Thread] DEBUG Input                - Mocking key release: Space
+15:27:21.045 [JavaFX Application Thread] DEBUG Input                - Mocking key release: Space
+15:27:21.079 [JavaFX Application Thread] DEBUG Input                - Mocking key release: Space
+15:27:21.112 [JavaFX Application Thread] DEBUG Input                - Mocking key release: Space
+15:27:22.228 [JavaFX Application Thread] DEBUG Input                - Mocking key release: Space
+15:27:22.496 [JavaFX Application Thread] DEBUG Input                - Mocking key release: Space
+15:27:22.645 [JavaFX Application Thread] DEBUG Input                - Mocking key release: Space
+15:27:22.899 [JavaFX Application Thread] DEBUG Input                - Mocking key release: Space
+15:27:23.197 [JavaFX Application Thread] DEBUG Input                - Mocking key release: Space
+15:27:24.012 [JavaFX Application Thread] DEBUG Input                - Mocking key release: Space
+15:27:24.709 [JavaFX Application Thread] DEBUG Input                - Mocking key release: Space
+15:27:25.215 [JavaFX Application Thread] DEBUG Input                - Mocking key release: Space
+15:27:25.577 [JavaFX Application Thread] DEBUG Input                - Mocking key release: Space
+15:27:25.811 [JavaFX Application Thread] DEBUG Input                - Mocking key release: Space
+15:27:26.010 [JavaFX Application Thread] DEBUG Input                - Mocking key release: Space
+15:27:26.863 [JavaFX Application Thread] DEBUG Input                - Mocking key release: Space
+15:27:27.509 [JavaFX Application Thread] DEBUG Input                - Mocking key release: Space
+15:27:28.059 [JavaFX Application Thread] DEBUG Input                - Mocking key release: Space
+15:27:28.658 [JavaFX Application Thread] DEBUG Input                - Mocking key release: Space
+15:27:29.318 [JavaFX Application Thread] DEBUG Input                - Mocking key release: Space
+15:27:29.926 [JavaFX Application Thread] DEBUG Input                - Mocking key release: Space
+15:27:30.443 [JavaFX Application Thread] DEBUG Input                - Mocking key release: Space
+15:27:31.041 [JavaFX Application Thread] DEBUG Input                - Mocking key release: Space
+15:27:31.668 [JavaFX Application Thread] DEBUG Input                - Mocking key release: Space
+15:27:32.273 [JavaFX Application Thread] DEBUG Input                - Mocking key release: Space
+15:27:32.957 [JavaFX Application Thread] DEBUG Input                - Mocking key release: Space
+15:27:33.543 [JavaFX Application Thread] DEBUG Input                - Mocking key release: Space
+15:27:34.139 [JavaFX Application Thread] DEBUG Input                - Mocking key release: Space
+15:27:34.658 [JavaFX Application Thread] DEBUG GameApplication      - Exiting game application
+15:27:34.659 [JavaFX Application Thread] DEBUG GameApplication      - Shutting down background threads
+15:27:34.659 [JavaFX Application Thread] DEBUG GameApplication      - Exiting FXGL
+15:27:34.659 [JavaFX Application Thread] DEBUG FXGL                 - Saving FXGL system data
+15:27:34.661 [JavaFX Application Thread] DEBUG DesktopFSService     - Writing to: system\fxgl.bundle
+15:27:34.664 [JavaFX Application Thread] DEBUG GameApplication      - Closing logger and exiting JavaFX
