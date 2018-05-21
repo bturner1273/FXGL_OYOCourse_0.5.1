@@ -1,0 +1,140 @@
+13:31:37.248 [JavaFX Application Thread] DEBUG GameApplication      - Logger initialized
+13:31:37.254 [JavaFX Application Thread] DEBUG MainWindow           - Creating a JavaFX scene
+13:31:37.327 [JavaFX Application Thread] DEBUG MainWindow           - Target settings size: 800.0 x 400.0
+13:31:37.328 [JavaFX Application Thread] DEBUG MainWindow           - Scaled scene size:    800.0 x 400.0
+13:31:37.328 [JavaFX Application Thread] DEBUG MainWindow           - Scaled ratio: (1.0, 1.0)
+13:31:37.333 [JavaFX Application Thread] DEBUG GameApplication      - Starting FXGL
+13:31:37.343 [JavaFX Application Thread] INFO  FXGL                 - FXGL-0.5.1 on DESKTOP
+13:31:37.344 [JavaFX Application Thread] INFO  FXGL                 - Source code and latest versions at: https://github.com/AlmasB/FXGL
+13:31:37.344 [JavaFX Application Thread] INFO  FXGL                 -              Join the FXGL chat at: https://gitter.im/AlmasB/FXGL
+13:31:37.349 [JavaFX Application Thread] DEBUG FS                   - Loaded DesktopFSService
+13:31:37.350 [JavaFX Application Thread] DEBUG FXGL                 - Loading FXGL system data
+13:31:37.357 [JavaFX Application Thread] DEBUG DesktopFSService     - Reading from: system\fxgl.bundle
+13:31:37.366 [JavaFX Application Thread] DEBUG Bundle               - Logging bundle: FXGL
+13:31:37.367 [JavaFX Application Thread] DEBUG Bundle               - FXGL.offline.timer.version.check=2018-05-16T18:22:51.838
+13:31:37.392 [JavaFX Application Thread] DEBUG GameApplication      - FXGL started
+13:31:37.392 [JavaFX Application Thread] DEBUG GameApplication      - Logging game settings
+Title: FlappyBird
+Version: 0.2.0
+Width: 800
+Height: 400
+Fullscreen: false
+Intro: false
+Menus: false
+Profiling: false
+Single step:false
+App Mode: DEVELOPER
+Menu Key: ESCAPE
+Stage Style: DECORATED
+Scene Factory: class com.almasb.fxgl.scene.SceneFactory
+Dialog Factory: class com.almasb.fxgl.ui.FXGLDialogFactory
+UI Factory: class com.almasb.fxgl.ui.FXGLUIFactory
+Notification Service: class com.almasb.fxgl.gameplay.notification.XboxNotificationView
+Exception Handler: class com.almasb.fxgl.app.FXGLExceptionHandler
+13:31:37.393 [JavaFX Application Thread] DEBUG GameApplication      - Configuring GameApplication
+13:31:37.393 [JavaFX Application Thread] DEBUG GameApplication      - Initializing state machine and application states
+13:31:37.405 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from disk: /assets/ui/cursors/fxgl_default.png
+13:31:37.427 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from disk: /assets/ui/cursors/fxgl_default.png
+13:31:37.445 [JavaFX Application Thread] DEBUG FXGLAssets           - Loading FXGLAssets
+13:31:37.472 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from disk: /assets/ui/fonts/VarelaRound-Regular.ttf
+13:31:37.600 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from disk: /assets/ui/fonts/lucida_console.ttf
+13:31:37.609 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from disk: /assets/ui/css/fxgl_dark.css
+13:31:37.632 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from disk: /assets/ui/cursors/fxgl_default.png
+13:31:37.658 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from disk: /assets/ui/cursors/fxgl_default.png
+13:31:37.671 [JavaFX Application Thread] DEBUG GameScene            - Game scene initialized: 800x400
+13:31:37.674 [JavaFX Application Thread] DEBUG GameWorld            - Game world initialized
+13:31:37.712 [JavaFX Application Thread] DEBUG PhysicsWorld         - Physics world initialized: appHeight=400, physics.ppm=50.0
+13:31:37.729 [JavaFX Application Thread] DEBUG Input                - Registered new binding: Pause - Esc
+13:31:37.743 [JavaFX Application Thread] DEBUG Input                - Clearing active input actions
+13:31:37.780 [JavaFX Application Thread] DEBUG AppStateMachine      - StartupState -> StartupState
+13:31:37.783 [JavaFX Application Thread] INFO  GameApplication      - Game configuration took:  0.390 sec
+13:31:37.785 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from disk: /assets/textures/fxgl_icon.png
+13:31:37.796 [JavaFX Application Thread] DEBUG MainWindow           - Opening main window
+13:31:37.931 [JavaFX Application Thread] DEBUG MainWindow           - Window border size: (4.0, 26.666656494140625)
+13:31:37.931 [JavaFX Application Thread] DEBUG MainWindow           - Scaled size: 800.0 x 400.0
+13:31:37.931 [JavaFX Application Thread] DEBUG MainWindow           - Scaled ratio: (1.0, 1.0)
+13:31:37.931 [JavaFX Application Thread] DEBUG MainWindow           - Scene size: 800.0 x 400.0
+13:31:37.931 [JavaFX Application Thread] DEBUG MainWindow           - Stage size: 804.0 x 426.6666564941406
+13:31:37.932 [JavaFX Application Thread] DEBUG GameApplication      - Running preInit()
+13:31:37.934 [JavaFX Application Thread] DEBUG Input                - Registered new binding: Screenshot - P
+13:31:37.934 [JavaFX Application Thread] DEBUG Input                - Registered new binding: Dev Options - CTRL+0
+13:31:37.935 [JavaFX Application Thread] DEBUG Input                - Registered new binding: System info dump - CTRL+9
+13:31:37.935 [JavaFX Application Thread] DEBUG Input                - Registered new binding: Restart - CTRL+R
+13:31:37.936 [JavaFX Application Thread] DEBUG Input                - Registered new binding: flap - LMB
+13:31:37.965 [JavaFX Application Thread] DEBUG GameApplication      - Starting main loop
+13:31:37.967 [JavaFX Application Thread] DEBUG StartupState         - STARTUP
+13:31:37.967 [JavaFX Application Thread] DEBUG GameApplication      - Starting new game
+13:31:37.967 [JavaFX Application Thread] DEBUG Input                - Clearing active input actions
+13:31:37.974 [JavaFX Application Thread] DEBUG AppStateMachine      - StartupState -> LoadingState
+13:31:37.980 [FXGL Background Thread 1 ] DEBUG InitAppTask          - Clearing previous game
+13:31:37.980 [FXGL Background Thread 1 ] DEBUG GameWorld            - Clearing game world
+13:31:37.980 [FXGL Background Thread 1 ] DEBUG PhysicsWorld         - Clearing physics world
+13:31:37.980 [FXGL Background Thread 1 ] DEBUG GameScene            - Clearing game scene
+13:31:37.982 [FXGL Background Thread 1 ] DEBUG InitAppTask          - Initializing Game
+13:31:38.005 [FXGL Background Thread 1 ] DEBUG AssetLoader          - Loading from disk: /assets/textures/FlappyPort/flappybird_fly_sheet.png
+13:31:38.094 [FXGL Background Thread 1 ] DEBUG GameScene            - Creating render group for layer: DEFAULT(100000)
+13:31:38.097 [FXGL Background Thread 1 ] DEBUG AssetLoader          - Loading from disk: /assets/textures/FlappyPort/ground.png
+13:31:38.101 [FXGL Background Thread 1 ] DEBUG GameScene            - Creating render group for layer: TOP(2147483647)
+13:31:38.102 [FXGL Background Thread 1 ] DEBUG AssetLoader          - Loading from cache: /assets/textures/FlappyPort/ground.png
+13:31:38.103 [FXGL Background Thread 1 ] DEBUG InitAppTask          - Initializing Physics
+13:31:38.104 [FXGL Background Thread 1 ] DEBUG InitAppTask          - Initializing UI
+13:31:38.104 [FXGL Background Thread 1 ] DEBUG AssetLoader          - Loading from disk: /assets/textures/FlappyPort/background.png
+13:31:38.121 [FXGL Background Thread 1 ] DEBUG InitAppTask          - Initialization Complete
+13:31:38.121 [FXGL Background Thread 1 ] INFO  InitAppTask          - Game initialization took: 0.142 sec
+13:31:38.132 [JavaFX Application Thread] DEBUG Input                - Clearing active input actions
+13:31:38.137 [JavaFX Application Thread] DEBUG AppStateMachine      - LoadingState -> PlayState
+13:31:38.352 [JavaFX Application Thread] DEBUG Input                - Mocking key release: Space
+13:31:38.862 [JavaFX Application Thread] DEBUG Input                - Mocking key release: Space
+13:31:38.996 [JavaFX Application Thread] DEBUG Input                - Mocking key release: Space
+13:31:39.124 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from disk: /assets/textures/FlappyPort/top_pipe.png
+13:31:39.127 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from disk: /assets/textures/FlappyPort/bottom_pipe.png
+13:31:39.129 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/FlappyPort/ground.png
+13:31:39.840 [JavaFX Application Thread] DEBUG Input                - Mocking key release: Space
+13:31:40.133 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/FlappyPort/top_pipe.png
+13:31:40.134 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/FlappyPort/bottom_pipe.png
+13:31:40.135 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/FlappyPort/ground.png
+13:31:40.546 [JavaFX Application Thread] DEBUG Input                - Mocking key release: Space
+13:31:41.148 [JavaFX Application Thread] DEBUG Input                - Mocking key release: Space
+13:31:41.157 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/FlappyPort/top_pipe.png
+13:31:41.158 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/FlappyPort/bottom_pipe.png
+13:31:41.159 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/FlappyPort/ground.png
+13:31:41.679 [JavaFX Application Thread] DEBUG Input                - Mocking key release: Space
+13:31:41.828 [JavaFX Application Thread] DEBUG Input                - Mocking key release: Space
+13:31:41.947 [JavaFX Application Thread] DEBUG Input                - Mocking key release: Space
+13:31:42.080 [JavaFX Application Thread] DEBUG Input                - Mocking key release: Space
+13:31:42.164 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/FlappyPort/top_pipe.png
+13:31:42.165 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/FlappyPort/bottom_pipe.png
+13:31:42.166 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/FlappyPort/ground.png
+13:31:42.653 [JavaFX Application Thread] DEBUG Input                - Mocking key release: Space
+13:31:43.188 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/FlappyPort/top_pipe.png
+13:31:43.190 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/FlappyPort/bottom_pipe.png
+13:31:43.191 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/FlappyPort/ground.png
+13:31:43.266 [JavaFX Application Thread] DEBUG Input                - Mocking key release: Space
+13:31:43.731 [JavaFX Application Thread] DEBUG Input                - Mocking key release: Space
+13:31:43.868 [JavaFX Application Thread] DEBUG Input                - Mocking key release: Space
+13:31:44.028 [JavaFX Application Thread] DEBUG Input                - Mocking key release: Space
+13:31:44.196 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/FlappyPort/top_pipe.png
+13:31:44.198 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/FlappyPort/bottom_pipe.png
+13:31:44.199 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/FlappyPort/ground.png
+13:31:44.593 [JavaFX Application Thread] DEBUG Input                - Mocking key release: Space
+13:31:45.220 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/FlappyPort/top_pipe.png
+13:31:45.222 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/FlappyPort/bottom_pipe.png
+13:31:45.222 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/FlappyPort/ground.png
+13:31:45.327 [JavaFX Application Thread] DEBUG Input                - Mocking key release: Space
+13:31:45.907 [JavaFX Application Thread] DEBUG Input                - Mocking key release: Space
+13:31:46.212 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/FlappyPort/top_pipe.png
+13:31:46.214 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/FlappyPort/bottom_pipe.png
+13:31:46.215 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/FlappyPort/ground.png
+13:31:46.493 [JavaFX Application Thread] DEBUG Input                - Mocking key release: Space
+13:31:47.220 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/FlappyPort/top_pipe.png
+13:31:47.222 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/FlappyPort/bottom_pipe.png
+13:31:47.222 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/FlappyPort/ground.png
+13:31:47.460 [JavaFX Application Thread] DEBUG Input                - Mocking key release: Space
+13:31:47.493 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from disk: /assets/textures/FlappyPort/game_over.png
+13:31:47.494 [JavaFX Application Thread] DEBUG GameScene            - Creating render group for layer: BACKGROUND(1000)
+13:31:48.950 [JavaFX Application Thread] DEBUG GameApplication      - Exiting game application
+13:31:48.951 [JavaFX Application Thread] DEBUG GameApplication      - Shutting down background threads
+13:31:48.952 [JavaFX Application Thread] DEBUG GameApplication      - Exiting FXGL
+13:31:48.952 [JavaFX Application Thread] DEBUG FXGL                 - Saving FXGL system data
+13:31:48.954 [JavaFX Application Thread] DEBUG DesktopFSService     - Writing to: system\fxgl.bundle
+13:31:48.957 [JavaFX Application Thread] DEBUG GameApplication      - Closing logger and exiting JavaFX

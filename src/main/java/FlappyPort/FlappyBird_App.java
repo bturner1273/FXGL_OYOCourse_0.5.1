@@ -16,6 +16,7 @@ import com.almasb.fxgl.entity.RenderLayer;
 import com.almasb.fxgl.entity.view.EntityView;
 import com.almasb.fxgl.extra.entity.components.ProjectileComponent;
 import com.almasb.fxgl.input.Input;
+import com.almasb.fxgl.input.InputMapping;
 import com.almasb.fxgl.input.UserAction;
 import com.almasb.fxgl.physics.CollisionHandler;
 import com.almasb.fxgl.physics.PhysicsComponent;
@@ -97,8 +98,8 @@ public class FlappyBird_App extends GameApplication {
 	}
 	
 	protected void pointer_rotate() {
-		birdPointer.setPosition(flappyBird.getCenter().getX()+20, 
-				flappyBird.getCenter().getY()+flappyBird.getComponent(PhysicsComponent.class).getVelocityY()/10);
+		birdPointer.setPosition(flappyBird.getCenter().getX()+20
+		,flappyBird.getCenter().getY()+flappyBird.getComponent(PhysicsComponent.class).getVelocityY()/10);
 		
 		if(birdPointer.getY() > flappyBird.getY()) {
 			if(flappyBird.getComponent(PhysicsComponent.class).getBody().getAngle() > .125f)
@@ -121,7 +122,7 @@ public class FlappyBird_App extends GameApplication {
 				if(flappyBird.hasComponent(PhysicsComponent.class))
 				flappyBird.getComponent(PhysicsComponent.class).setVelocityY(FLAP_FORCE);
 			}
-		}, KeyCode.SPACE);
+		}, MouseButton.PRIMARY);
 	}
 	
 	public static void main(String[] args) {
