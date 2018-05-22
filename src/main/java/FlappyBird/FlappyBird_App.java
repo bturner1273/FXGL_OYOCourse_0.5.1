@@ -25,6 +25,7 @@ import com.almasb.fxgl.settings.GameSettings;
 import com.almasb.fxgl.texture.Texture;
 
 public class FlappyBird_App extends GameApplication {
+	Input input;
 	boolean done = false;
 	Entity flappyBird, birdPointer;
 	final int BACKGROUND_PIC_HEIGHT = 400, FLAP_FORCE = -250, MAX_GRAVITY = 800, PIPE_SPACING = 350,
@@ -114,15 +115,25 @@ public class FlappyBird_App extends GameApplication {
 	
 	@Override
 	protected void initInput() {
-		Input input = getInput();
-		input.addAction(new UserAction("flap") {
+		input = getInput();
+		input.addAction(new UserAction("flap0") {
 			@Override
 			protected void onActionBegin() {
-				input.mockKeyRelease(KeyCode.SPACE);
-				if(flappyBird.hasComponent(PhysicsComponent.class))
-				flappyBird.getComponent(PhysicsComponent.class).setVelocityY(FLAP_FORCE);
+				flap();
 			}
 		}, MouseButton.PRIMARY);
+		input.addAction(new UserAction("flap1") {
+			@Override
+			protected void onActionBegin() {
+				flap();
+			}
+		}, KeyCode.SPACE);
+		
+	}
+	public void flap() {
+		input.mockKeyRelease(KeyCode.SPACE);
+		if(flappyBird.hasComponent(PhysicsComponent.class))
+		flappyBird.getComponent(PhysicsComponent.class).setVelocityY(FLAP_FORCE);
 	}
 	
 	public static void main(String[] args) {
