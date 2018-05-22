@@ -36,7 +36,7 @@ public class FlappyBird_App extends GameApplication {
 		settings.setTitle("FlappyBird");
 		settings.setVersion("0.2.0"); 
 		settings.setHeight(BACKGROUND_PIC_HEIGHT);
-		settings.setApplicationMode(ApplicationMode.RELEASE);
+		settings.setApplicationMode(ApplicationMode.DEVELOPER);
 	}
 	
 	@Override
