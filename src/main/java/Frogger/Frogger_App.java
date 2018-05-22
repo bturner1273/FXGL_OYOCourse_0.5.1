@@ -38,6 +38,10 @@ public class Frogger_App extends GameApplication{
 		PhysicsWorld physicsWorld = getPhysicsWorld();
 		physicsWorld.addCollisionHandler(new CollisionHandler(Frogger_Types.BACK_CAR, Frogger_Types.FRONT_CAR) {
 			@Override
+			protected void onCollisionBegin(Entity back_car, Entity front_car) {
+				back_car.getComponent(ProjectileComponent.class).setSpeed(front_car.getComponent(ProjectileComponent.class).getSpeed());
+			}
+			@Override
 			protected void onCollision(Entity back_car, Entity front_car) {
 				back_car.getComponent(ProjectileComponent.class).setSpeed(front_car.getComponent(ProjectileComponent.class).getSpeed());
 			}
@@ -133,13 +137,15 @@ public class Frogger_App extends GameApplication{
 		scaleFrog();
 		spawnLogs();
 		scale(.65,r_log,l_log);
+		scale(4.15, getGameWorld().spawn("rotating_log",getWidth()/2, ((RIGHT_LOG_SPAWN_HEIGHT+LEFT_LOG_SPAWN_HEIGHT)/2) + 17.5));
+		
 		getGameWorld().spawn("score_hitbox");
 		getMasterTimer().runAtInterval(() -> {
 			Entity[] cars = {getGameWorld().spawn("right_car",getWidth(), getHeight()/2-20),
 			getGameWorld().spawn("left_car", -75, getHeight()/2+75)};
 			for(int i = 0; i <= 1; i++) {
-				cars[i].setScaleX(.25);
-				cars[i].setScaleY(.25);
+				cars[i].setScaleX(.35);
+				cars[i].setScaleY(.35);
 			}
 			//this statement is the same as r_log.getX() >= getWidth()/2
 			//I just wanted to show you how to write a component because
@@ -148,7 +154,7 @@ public class Frogger_App extends GameApplication{
 				spawnLogs();
 				scale(.65, r_log, l_log);	
 			}
-		}, Duration.seconds(.7));
+		}, Duration.seconds(.9));
 	}
 	
 	protected void spawnLogs() {

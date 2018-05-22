@@ -1,5 +1,5 @@
 package Frogger;
 
 public enum Frogger_Types {
-	FROG, LOG, WATER, FRONT_CAR, BACK_CAR, POINT;
+	FROG, LOG, WATER, FRONT_CAR, BACK_CAR, POINT, ROTATING_LOG;
 }

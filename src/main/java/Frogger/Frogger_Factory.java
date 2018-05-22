@@ -5,6 +5,7 @@ import com.almasb.fxgl.core.math.FXGLMath;
 import com.almasb.fxgl.entity.Entities;
 import com.almasb.fxgl.entity.Entity;
 import com.almasb.fxgl.entity.EntityFactory;
+import com.almasb.fxgl.entity.RenderLayer;
 import com.almasb.fxgl.entity.SpawnData;
 import com.almasb.fxgl.entity.Spawns;
 import com.almasb.fxgl.entity.components.CollidableComponent;
@@ -36,6 +37,19 @@ ExpireCleanComponent trash_bin = new ExpireCleanComponent(Duration.seconds(10));
 				.build();
 	}
 	
+	@Spawns("rotating_log")
+	public Entity newRotatingLog(SpawnData data) {
+		AnimationChannel rotate = new AnimationChannel("Frogger/rotating_log.png", 4, 128/4, 32, Duration.millis(500), 0, 3);
+		AnimatedTexture rot_log = new AnimatedTexture(rotate);
+		return Entities.builder()
+				.type(Frogger_Types.ROTATING_LOG)
+				.from(data)
+				.viewFromAnimatedTexture(rot_log)
+				.bbox(new HitBox(BoundingShape.box(128, 32)))
+				.with(new CollidableComponent(true))
+				.build();
+		}
+	
 	@Spawns("right_log")
 	public Entity newRightLog(SpawnData data) {
 		right++;
@@ -63,7 +77,7 @@ ExpireCleanComponent trash_bin = new ExpireCleanComponent(Duration.seconds(10));
 				.with(new CollidableComponent(true))
 				.with(new ProjectileComponent(new Point2D(-1,0), FXGLMath.random(100, 200)))
 				.with(new HalfWayTrackerComponent())
-				.with(trash_bin)
+				.with(trash_bin)	
 				.build();
 	}
 	
@@ -80,6 +94,7 @@ ExpireCleanComponent trash_bin = new ExpireCleanComponent(Duration.seconds(10));
 				.with(new ProjectileComponent(new Point2D(-1,0), FXGLMath.random(300, 550)))
 				.with(new CollidableComponent(true))
 				.with(trash_bin)
+				.renderLayer(RenderLayer.TOP)
 				.build();
 	}
 	
@@ -96,6 +111,7 @@ ExpireCleanComponent trash_bin = new ExpireCleanComponent(Duration.seconds(10));
 				.with(new ProjectileComponent(new Point2D(1,0), FXGLMath.random(300, 550)))
 				.with(new CollidableComponent(true))
 				.with(trash_bin)
+				.renderLayer(RenderLayer.TOP)
 				.build();
 	}
 	
