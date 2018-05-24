@@ -23,9 +23,10 @@ import javafx.util.Duration;
 
 public class Frogger_App extends GameApplication{
 	final int SCREEN_HEIGHT = 470, START_X = 0, START_Y = SCREEN_HEIGHT-100, ANIM_DURATION = 500,
-			MOVE_SPEED = 30, RIGHT_LOG_SPAWN_HEIGHT = 11, RIGHT_LOG_X_OFFSET = -150,
-			LEFT_LOG_SPAWN_HEIGHT = 130, LEFT_LOG_X_OFFSET = 150;
-	Entity frog, r_log, l_log;
+			MOVE_SPEED = 30, RIGHT_LOG_SPAWN_HEIGHT = 15, RIGHT_LOG_X_OFFSET = -150,
+			LEFT_LOG_SPAWN_HEIGHT = 125, LEFT_LOG_X_OFFSET = 150;
+	Entity frog, r_log, l_log, m_log;
+	boolean start = true;
 	@Override
 	protected void initSettings(GameSettings settings) {
 		settings.setTitle("Frogger");
@@ -48,6 +49,18 @@ public class Frogger_App extends GameApplication{
 			@Override
 			protected void onCollisionEnd(Entity back_car, Entity front_car) {
 				back_car.getComponent(ProjectileComponent.class).setSpeed(front_car.getComponent(ProjectileComponent.class).getSpeed());
+			}
+		});
+		physicsWorld.addCollisionHandler(new CollisionHandler(Frogger_Types.FROG, Frogger_Types.FRONT_CAR) {
+			@Override
+			protected void onCollisionBegin(Entity frog, Entity car) {
+				splatAnimation();
+			}
+		});
+		physicsWorld.addCollisionHandler(new CollisionHandler(Frogger_Types.FROG, Frogger_Types.BACK_CAR) {
+			@Override
+			protected void onCollisionBegin(Entity frog, Entity car) {
+				splatAnimation();
 			}
 		});
 	}
@@ -91,6 +104,12 @@ public class Frogger_App extends GameApplication{
 				jumpAnimation();
 			}
 		}, KeyCode.D);		
+		input.addAction(new UserAction("testd") {
+			@Override
+			protected void onActionBegin() {
+				sinkAnimation();
+			}
+		}, KeyCode.SPACE);		
 	}
 	
 	protected void jumpAnimation() {
@@ -109,17 +128,19 @@ public class Frogger_App extends GameApplication{
 		scale(sinking, 1.5);
 		frog.getViewComponent().setAnimatedTexture(sinking, false, true);
 		getMasterTimer().runOnceAfter(() -> {
+			frog.removeFromWorld();
 			frog = getGameWorld().spawn("frog", START_X, START_Y);
 			scaleFrog();
 		}, Duration.millis(ANIM_DURATION));
 	}
 
 	protected void splatAnimation() {
-		AnimationChannel splat = new AnimationChannel("Frogger/splatting_frog.png", 3, 96/3, 32, Duration.millis(ANIM_DURATION), 0, 2);
-		AnimatedTexture splatting = new AnimatedTexture(splat);
-		scale(splatting, 1.5);
-		frog.getViewComponent().setAnimatedTexture(splatting, false, true);
+//		AnimationChannel splat = new AnimationChannel("Frogger/splatting_frog.png", 4, 96/3, 32, Duration.millis(ANIM_DURATION), 0, 2);
+		AnimatedTexture splat = getAssetLoader().loadTexture("Frogger/splatting_frog.png").toAnimatedTexture(3, Duration.millis(ANIM_DURATION));
+//		AnimatedTexture splatting = new AnimatedTexture(splat);
+		frog.setView(splat);
 		getMasterTimer().runOnceAfter(() -> {
+			frog.removeFromWorld();
 			frog = getGameWorld().spawn("frog", START_X, START_Y);
 			scaleFrog();
 		}, Duration.millis(ANIM_DURATION));
@@ -136,31 +157,38 @@ public class Frogger_App extends GameApplication{
 		frog = getGameWorld().spawn("frog", START_X, START_Y);
 		scaleFrog();
 		spawnLogs();
-		scale(.65,r_log,l_log);
-		scale(4.15, getGameWorld().spawn("rotating_log",getWidth()/2, ((RIGHT_LOG_SPAWN_HEIGHT+LEFT_LOG_SPAWN_HEIGHT)/2) + 17.5));
+		scale(.8, r_log, l_log, m_log);
+		scale(1.0, getGameWorld().spawn("rotating_log",getWidth()-120, getHeight()-25));
 		
 		getGameWorld().spawn("score_hitbox");
 		getMasterTimer().runAtInterval(() -> {
 			Entity[] cars = {getGameWorld().spawn("right_car",getWidth(), getHeight()/2-20),
 			getGameWorld().spawn("left_car", -75, getHeight()/2+75)};
 			for(int i = 0; i <= 1; i++) {
-				cars[i].setScaleX(.35);
-				cars[i].setScaleY(.35);
+				cars[i].setScaleX(.45);
+				cars[i].setScaleY(.45);
 			}
 			//this statement is the same as r_log.getX() >= getWidth()/2
 			//I just wanted to show you how to write a component because
 			//for complicated games you will certainly need to write your own
 			if(r_log.getComponent(HalfWayTrackerComponent.class).pastHalfway()) { 
 				spawnLogs();
-				scale(.65, r_log, l_log);	
+				scale(.8, r_log, l_log, m_log);	
 			}
+			splatAnimation();
 		}, Duration.seconds(.9));
 	}
 	
 	protected void spawnLogs() {
 		r_log = getGameWorld().spawn("right_log",RIGHT_LOG_X_OFFSET,RIGHT_LOG_SPAWN_HEIGHT);
 		l_log = getGameWorld().spawn("left_log", getWidth()+LEFT_LOG_X_OFFSET, LEFT_LOG_SPAWN_HEIGHT);
-	}
+		if(start ||(m_log.getX() > getWidth() || m_log.getRightX() < 0)) {
+			start = false;
+			if(FXGLMath.random(0, 1) % 2 == 0) {
+				m_log = getGameWorld().spawn("right_log", RIGHT_LOG_X_OFFSET, (LEFT_LOG_SPAWN_HEIGHT+RIGHT_LOG_SPAWN_HEIGHT)/2);
+			}else m_log = getGameWorld().spawn("left_log", getWidth()+LEFT_LOG_X_OFFSET, (LEFT_LOG_SPAWN_HEIGHT+RIGHT_LOG_SPAWN_HEIGHT)/2);
+		}
+		}
 	
 	protected void scale(double scaleFactor, Entity... toScale) {
 		for(int i = 0; i < toScale.length; i++) {

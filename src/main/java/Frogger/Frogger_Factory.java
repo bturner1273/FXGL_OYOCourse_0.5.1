@@ -28,10 +28,12 @@ ExpireCleanComponent trash_bin = new ExpireCleanComponent(Duration.seconds(10));
 
 	@Spawns("frog")
 	public Entity newFrog(SpawnData data) {
+		Texture splat = FXGL.getAssetLoader().loadTexture("Frogger/splatting_frog.png").toAnimatedTexture(3, Duration.millis(500));
+		
 		return Entities.builder()
 				.type(Frogger_Types.FROG)
 				.from(data)
-				.viewFromTexture("Frogger/frog_idle.png")
+                .viewFromTexture("Frogger/frog_idle.png")
 				.bbox(new HitBox(BoundingShape.box(180,192)))
 				.with(new CollidableComponent(true))
 				.build();
@@ -42,11 +44,8 @@ ExpireCleanComponent trash_bin = new ExpireCleanComponent(Duration.seconds(10));
 		AnimationChannel rotate = new AnimationChannel("Frogger/rotating_log.png", 4, 128/4, 32, Duration.millis(500), 0, 3);
 		AnimatedTexture rot_log = new AnimatedTexture(rotate);
 		return Entities.builder()
-				.type(Frogger_Types.ROTATING_LOG)
 				.from(data)
 				.viewFromAnimatedTexture(rot_log)
-				.bbox(new HitBox(BoundingShape.box(128, 32)))
-				.with(new CollidableComponent(true))
 				.build();
 		}
 	
@@ -54,14 +53,16 @@ ExpireCleanComponent trash_bin = new ExpireCleanComponent(Duration.seconds(10));
 	public Entity newRightLog(SpawnData data) {
 		right++;
 		int rand = FXGLMath.random(0, 1);
-		String[] logs = {"Frogger/half_log.png", "Frogger/full_log.png"};
+		String[] right_logs = {"Frogger/half_log.png", "Frogger/full_log.png"};
+		HitBox[] hits = {new HitBox(BoundingShape.box(84, 60)),new HitBox(BoundingShape.box(174, 60))};
 		return Entities.builder()
 				.type(Frogger_Types.LOG)
 				.from(data)
-				.viewFromTexture(logs[rand])
+				.viewFromTexture(right_logs[rand])
 				.with(new CollidableComponent(true))
 				.with(new ProjectileComponent(new Point2D(1,0), FXGLMath.random(100, 200)))
 				.with(new HalfWayTrackerComponent())
+				.bbox(hits[rand])
 				.with(trash_bin)
 				.build();
 	}
@@ -70,6 +71,7 @@ ExpireCleanComponent trash_bin = new ExpireCleanComponent(Duration.seconds(10));
 	public Entity newLeftLog(SpawnData data) {
 		int rand = FXGLMath.random(0, 1);
 		String[] left_logs = {"Frogger/half_log.png", "Frogger/full_log.png"};
+		HitBox[] hits = {new HitBox(BoundingShape.box(84, 60)),new HitBox(BoundingShape.box(174, 60))};
 		return Entities.builder()
 				.type(Frogger_Types.LOG)
 				.from(data)
@@ -77,6 +79,7 @@ ExpireCleanComponent trash_bin = new ExpireCleanComponent(Duration.seconds(10));
 				.with(new CollidableComponent(true))
 				.with(new ProjectileComponent(new Point2D(-1,0), FXGLMath.random(100, 200)))
 				.with(new HalfWayTrackerComponent())
+				.bbox(hits[rand])
 				.with(trash_bin)	
 				.build();
 	}
