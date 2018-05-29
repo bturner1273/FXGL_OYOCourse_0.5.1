@@ -17,6 +17,7 @@ public class Platformer_App extends GameApplication {
 	protected void initGame() {
 		getGameWorld().addEntityFactory(new Platformer_Factory());
 		getGameWorld().setLevelFromMap("platformer_map_1.tmx");
+		getGameWorld().spawn("player", 100, 100);
 	}
 	
 	public static void main(String[] args) {

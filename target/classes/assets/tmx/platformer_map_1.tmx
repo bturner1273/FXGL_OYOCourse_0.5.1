@@ -22,9 +22,9 @@
 129,104,104,104,4,4,4,4,8,8,8,8,104,104,104,104,104,104,104,105
 </data>
  </layer>
- <objectgroup name="Object Layer 1" visible="0">
+ <objectgroup name="Object Layer 1">
   <object id="2" name="platform" type="platform" x="8" y="996" width="1394" height="64"/>
-  <object id="3" name="platform" x="424" y="856" width="140" height="138"/>
+  <object id="3" name="platform" type="platform" x="424" y="856" width="140" height="138"/>
   <object id="7" name="platform" type="platform" x="350" y="928" width="74" height="62"/>
   <object id="9" name="platform" type="platform" x="494" y="786" width="286" height="44"/>
   <object id="10" name="platform" type="platform" x="848" y="854" width="68" height="142"/>

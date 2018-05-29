@@ -9,7 +9,13 @@ import com.almasb.fxgl.entity.components.CollidableComponent;
 import com.almasb.fxgl.physics.BoundingShape;
 import com.almasb.fxgl.physics.HitBox;
 import com.almasb.fxgl.physics.PhysicsComponent;
+import com.almasb.fxgl.physics.box2d.dynamics.BodyDef;
+import com.almasb.fxgl.physics.box2d.dynamics.BodyType;
+import com.almasb.fxgl.texture.AnimatedTexture;
+import com.almasb.fxgl.texture.AnimationChannel;
 
+import javafx.util.Duration;
+import javafx.geometry.Point2D;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Circle;
 
@@ -62,7 +68,23 @@ public class Platformer_Factory implements EntityFactory {
 	
 	@Spawns("player")
 	public Entity newPlayer(SpawnData data) {
-		return Entities.builder().build();
+		AnimationChannel idle = new AnimationChannel("Platformer/stand_sheet.png", 2, 606/2, 431, Duration.millis(300), 0, 1);
+		AnimatedTexture pic = new AnimatedTexture(idle);
+		pic.setScaleX(.25);
+		pic.setScaleY(.25);
+		
+		PhysicsComponent physics = new PhysicsComponent();
+		BodyDef bd = new BodyDef();
+		bd.setType(BodyType.DYNAMIC);
+		bd.setFixedRotation(true);
+		physics.setBodyDef(bd);
+		
+		return Entities.builder()
+				.from(data)
+				.viewFromAnimatedTexture(pic)
+				.bbox(new HitBox(new Point2D(115, 162), BoundingShape.box(606/8, 431/4)))
+				.with(physics)
+				.build();
 	}
 	
 }
