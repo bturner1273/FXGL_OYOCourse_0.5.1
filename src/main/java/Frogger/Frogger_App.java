@@ -74,6 +74,14 @@ public class Frogger_App extends GameApplication{
 				frog.setX(log.getCenter().getX());
 			}
 		});
+		physicsWorld.addCollisionHandler(new CollisionHandler(Frogger_Types.FROG, Frogger_Types.WATER) {
+			@Override
+			protected void onCollision(Entity frog, Entity water) {
+				if(!(frog.isColliding(r_log) || frog.isColliding(m_log) || frog.isColliding(l_log))) {
+					sinkAnimation();
+				}
+			}
+		});
 	}
 	
 	@Override
@@ -146,12 +154,13 @@ public class Frogger_App extends GameApplication{
 	}
 	
 	protected void sinkAnimation() {
-		AnimationChannel sink = new AnimationChannel("Frogger/sinking_frog.png", 5, 160/5, 32, Duration.millis(ANIM_DURATION), 0, 4);
+		AnimationChannel sink = new AnimationChannel("Frogger/sinking_frog.png", 5, 320/5, 64, Duration.millis(ANIM_DURATION), 0, 4);
 		AnimatedTexture sinking = new AnimatedTexture(sink);
-		scale(sinking, 1.5);
+		scale(sinking, 5);
 		frog.getViewComponent().setAnimatedTexture(sinking, false, true);
+		frog.setPosition(new Point2D(frog.getX()+55, frog.getY()+55));
+		frog = null;
 		getMasterTimer().runOnceAfter(() -> {
-			frog.removeFromWorld();
 			frog = getGameWorld().spawn("frog", START_X, START_Y);
 			scaleFrog();
 		}, Duration.millis(ANIM_DURATION));
@@ -181,6 +190,7 @@ public class Frogger_App extends GameApplication{
 		frog = getGameWorld().spawn("frog", START_X, START_Y);
 		scaleFrog();
 		spawnLogs();
+		getGameWorld().spawn("water");
 		scale(.8, r_log, l_log, m_log);
 		scale(1.0, getGameWorld().spawn("rotating_log",getWidth()-120, getHeight()-25));
 		

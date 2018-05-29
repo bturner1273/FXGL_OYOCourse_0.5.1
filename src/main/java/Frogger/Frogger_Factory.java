@@ -123,8 +123,10 @@ ExpireCleanComponent trash_bin = new ExpireCleanComponent(Duration.seconds(10));
 	@Spawns("water")
 	public Entity newWater(SpawnData data) {
 		return Entities.builder()
+				.at(0,23)
 				.type(Frogger_Types.WATER)
-				.from(data)
+				.viewFromNode(new Rectangle(FXGL.getAppWidth(), FXGL.getAppHeight()/3, Color.TRANSPARENT))
+				.bbox(new HitBox(BoundingShape.box(FXGL.getAppWidth(), FXGL.getAppHeight()/6)))
 				.with(new CollidableComponent(true))
 				.build();
 	}
@@ -132,10 +134,7 @@ ExpireCleanComponent trash_bin = new ExpireCleanComponent(Duration.seconds(10));
 	@Spawns("score_hitbox")
 	public Entity newScoreHitBox(SpawnData data) {
 		return Entities.builder()
-				.type(Frogger_Types.POINT)
-				.at(0,21)
-				.viewFromNode(new Rectangle(FXGL.getAppWidth(), FXGL.getAppHeight()/3, Color.TRANSPARENT))
-				.bbox(new HitBox(BoundingShape.box(FXGL.getAppWidth(), FXGL.getAppHeight()/3)))
+				.type(Frogger_Types.POINT)				
 				.with(new CollidableComponent(true))
 				.build();
 	}
