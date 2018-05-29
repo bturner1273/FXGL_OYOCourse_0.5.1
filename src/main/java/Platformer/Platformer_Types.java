@@ -1,5 +1,5 @@
 package Platformer;
 
 public enum Platformer_Types {
-	PLAYER;
+	PLAYER, PLATFORM, COIN, DOOR, LAVA;
 }
