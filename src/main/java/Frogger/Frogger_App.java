@@ -1,6 +1,7 @@
 package Frogger;
 
 import java.util.HashMap;
+import java.util.Map;
 
 import com.almasb.fxgl.app.GameApplication;
 import com.almasb.fxgl.core.math.FXGLMath;
@@ -24,6 +25,9 @@ import com.almasb.fxgl.texture.Texture;
 import javafx.geometry.Point2D;
 import javafx.scene.image.*;
 import javafx.scene.input.KeyCode;
+import javafx.scene.paint.Color;
+import javafx.scene.text.Font;
+import javafx.scene.text.Text;
 import javafx.util.Duration;
 
 public class Frogger_App extends GameApplication{
@@ -82,6 +86,24 @@ public class Frogger_App extends GameApplication{
 				}
 			}
 		});
+		physicsWorld.addCollisionHandler(new CollisionHandler(Frogger_Types.FROG, Frogger_Types.POINT) {
+			@Override
+			protected void onCollision(Entity frog, Entity point) {
+				getGameState().increment("score", 1);
+				resetFrog();
+			}
+		});
+	}
+	
+	protected void resetFrog() {
+		frog.removeFromWorld();
+		frog = getGameWorld().spawn("frog", START_X, START_Y);
+		scaleFrog();
+	}
+	
+	@Override
+	protected void initGameVars(Map<String, Object> vars) {
+		vars.put("score", 0);
 	}
 	
 	@Override
@@ -192,7 +214,7 @@ public class Frogger_App extends GameApplication{
 		spawnLogs();
 		getGameWorld().spawn("water");
 		scale(.8, r_log, l_log, m_log);
-		scale(1.0, getGameWorld().spawn("rotating_log",getWidth()-120, getHeight()-25));
+		scale(1.0, getGameWorld().spawn("rotating_log",getWidth()-115, getHeight()-25));
 		
 		getGameWorld().spawn("score_hitbox");
 		getMasterTimer().runAtInterval(() -> {
@@ -238,6 +260,20 @@ public class Frogger_App extends GameApplication{
 	@Override
 	protected void initUI() {
 		getGameScene().setBackgroundRepeat("Frogger/background.jpg");
+		Text text = new Text();
+		text.setFont(Font.font ("Arial Bold", 35));
+		text.textProperty().bind(getGameState().intProperty("score").asString());
+		text.setFill(Color.WHITE);
+		text.setTranslateX(getWidth()-50);
+		text.setTranslateY(getHeight()-5);
+		getGameScene().addUINode(text);
+		Text label = new Text();
+		label.textProperty().set("Score:");
+		label.setFont(Font.font ("Arial Bold", 20));
+		label.setFill(Color.WHITE);
+		label.setTranslateX(getWidth()-125);
+		label.setTranslateY(getHeight()-15);
+		getGameScene().addUINode(label);
 	}
 	
 	public static void main(String[] args) {

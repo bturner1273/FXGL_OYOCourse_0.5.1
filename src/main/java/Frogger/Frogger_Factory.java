@@ -134,8 +134,10 @@ ExpireCleanComponent trash_bin = new ExpireCleanComponent(Duration.seconds(10));
 	@Spawns("score_hitbox")
 	public Entity newScoreHitBox(SpawnData data) {
 		return Entities.builder()
+				.at(0,-140)
 				.type(Frogger_Types.POINT)				
 				.with(new CollidableComponent(true))
+				.viewFromNodeWithBBox(new Rectangle(FXGL.getAppWidth(), FXGL.getAppHeight()/8, Color.BLACK))
 				.build();
 	}
 	
