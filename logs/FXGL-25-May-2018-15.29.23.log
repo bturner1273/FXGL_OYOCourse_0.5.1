@@ -1,0 +1,179 @@
+15:29:12.522 [JavaFX Application Thread] DEBUG GameApplication      - Logger initialized
+15:29:12.528 [JavaFX Application Thread] DEBUG MainWindow           - Creating a JavaFX scene
+15:29:12.614 [JavaFX Application Thread] DEBUG MainWindow           - Target settings size: 800.0 x 470.0
+15:29:12.615 [JavaFX Application Thread] DEBUG MainWindow           - Scaled scene size:    800.0 x 470.0
+15:29:12.615 [JavaFX Application Thread] DEBUG MainWindow           - Scaled ratio: (1.0, 1.0)
+15:29:12.622 [JavaFX Application Thread] DEBUG GameApplication      - Starting FXGL
+15:29:12.631 [JavaFX Application Thread] INFO  FXGL                 - FXGL-0.5.1 on DESKTOP
+15:29:12.632 [JavaFX Application Thread] INFO  FXGL                 - Source code and latest versions at: https://github.com/AlmasB/FXGL
+15:29:12.632 [JavaFX Application Thread] INFO  FXGL                 -              Join the FXGL chat at: https://gitter.im/AlmasB/FXGL
+15:29:12.638 [JavaFX Application Thread] DEBUG FS                   - Loaded DesktopFSService
+15:29:12.639 [JavaFX Application Thread] DEBUG FXGL                 - Loading FXGL system data
+15:29:12.647 [JavaFX Application Thread] DEBUG DesktopFSService     - Reading from: system\fxgl.bundle
+15:29:12.657 [JavaFX Application Thread] DEBUG Bundle               - Logging bundle: FXGL
+15:29:12.657 [JavaFX Application Thread] DEBUG Bundle               - FXGL.offline.timer.version.check=2018-05-24T09:09:49.283
+15:29:12.692 [JavaFX Application Thread] DEBUG GameApplication      - FXGL started
+15:29:12.692 [JavaFX Application Thread] DEBUG GameApplication      - Logging game settings
+Title: Frogger
+Version: 0.2.0
+Width: 800
+Height: 470
+Fullscreen: false
+Intro: false
+Menus: false
+Profiling: false
+Single step:false
+App Mode: DEVELOPER
+Menu Key: ESCAPE
+Stage Style: DECORATED
+Scene Factory: class com.almasb.fxgl.scene.SceneFactory
+Dialog Factory: class com.almasb.fxgl.ui.FXGLDialogFactory
+UI Factory: class com.almasb.fxgl.ui.FXGLUIFactory
+Notification Service: class com.almasb.fxgl.gameplay.notification.XboxNotificationView
+Exception Handler: class com.almasb.fxgl.app.FXGLExceptionHandler
+15:29:12.693 [JavaFX Application Thread] DEBUG GameApplication      - Configuring GameApplication
+15:29:12.693 [JavaFX Application Thread] DEBUG GameApplication      - Initializing state machine and application states
+15:29:12.705 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from disk: /assets/ui/cursors/fxgl_default.png
+15:29:12.726 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from disk: /assets/ui/cursors/fxgl_default.png
+15:29:12.746 [JavaFX Application Thread] DEBUG FXGLAssets           - Loading FXGLAssets
+15:29:12.780 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from disk: /assets/ui/fonts/VarelaRound-Regular.ttf
+15:29:12.921 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from disk: /assets/ui/fonts/lucida_console.ttf
+15:29:12.932 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from disk: /assets/ui/css/fxgl_dark.css
+15:29:12.957 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from disk: /assets/ui/cursors/fxgl_default.png
+15:29:12.983 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from disk: /assets/ui/cursors/fxgl_default.png
+15:29:12.999 [JavaFX Application Thread] DEBUG GameScene            - Game scene initialized: 800x470
+15:29:13.002 [JavaFX Application Thread] DEBUG GameWorld            - Game world initialized
+15:29:13.045 [JavaFX Application Thread] DEBUG PhysicsWorld         - Physics world initialized: appHeight=470, physics.ppm=50.0
+15:29:13.061 [JavaFX Application Thread] DEBUG Input                - Registered new binding: Pause - Esc
+15:29:13.078 [JavaFX Application Thread] DEBUG Input                - Clearing active input actions
+15:29:13.116 [JavaFX Application Thread] DEBUG AppStateMachine      - StartupState -> StartupState
+15:29:13.121 [JavaFX Application Thread] INFO  GameApplication      - Game configuration took:  0.428 sec
+15:29:13.124 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from disk: /assets/textures/fxgl_icon.png
+15:29:13.137 [JavaFX Application Thread] DEBUG MainWindow           - Opening main window
+15:29:13.288 [JavaFX Application Thread] DEBUG MainWindow           - Window border size: (4.0, 26.666656494140625)
+15:29:13.289 [JavaFX Application Thread] DEBUG MainWindow           - Scaled size: 800.0 x 470.0
+15:29:13.289 [JavaFX Application Thread] DEBUG MainWindow           - Scaled ratio: (1.0, 1.0)
+15:29:13.289 [JavaFX Application Thread] DEBUG MainWindow           - Scene size: 800.0 x 470.0
+15:29:13.289 [JavaFX Application Thread] DEBUG MainWindow           - Stage size: 804.0 x 496.6666564941406
+15:29:13.290 [JavaFX Application Thread] DEBUG GameApplication      - Running preInit()
+15:29:13.292 [JavaFX Application Thread] DEBUG Input                - Registered new binding: Screenshot - P
+15:29:13.292 [JavaFX Application Thread] DEBUG Input                - Registered new binding: Dev Options - CTRL+0
+15:29:13.293 [JavaFX Application Thread] DEBUG Input                - Registered new binding: System info dump - CTRL+9
+15:29:13.293 [JavaFX Application Thread] DEBUG Input                - Registered new binding: Restart - CTRL+R
+15:29:13.293 [JavaFX Application Thread] DEBUG Input                - Registered new binding: up - W
+15:29:13.293 [JavaFX Application Thread] DEBUG Input                - Registered new binding: down - S
+15:29:13.293 [JavaFX Application Thread] DEBUG Input                - Registered new binding: left - A
+15:29:13.293 [JavaFX Application Thread] DEBUG Input                - Registered new binding: right - D
+15:29:13.294 [JavaFX Application Thread] DEBUG Input                - Registered new binding: testd - Space
+15:29:13.320 [JavaFX Application Thread] DEBUG GameApplication      - Starting main loop
+15:29:13.322 [JavaFX Application Thread] DEBUG StartupState         - STARTUP
+15:29:13.322 [JavaFX Application Thread] DEBUG GameApplication      - Starting new game
+15:29:13.322 [JavaFX Application Thread] DEBUG Input                - Clearing active input actions
+15:29:13.330 [JavaFX Application Thread] DEBUG AppStateMachine      - StartupState -> LoadingState
+15:29:13.334 [FXGL Background Thread 1 ] DEBUG InitAppTask          - Clearing previous game
+15:29:13.334 [FXGL Background Thread 1 ] DEBUG GameWorld            - Clearing game world
+15:29:13.334 [FXGL Background Thread 1 ] DEBUG PhysicsWorld         - Clearing physics world
+15:29:13.334 [FXGL Background Thread 1 ] DEBUG GameScene            - Clearing game scene
+15:29:13.335 [FXGL Background Thread 1 ] DEBUG InitAppTask          - Initializing Game
+15:29:13.353 [FXGL Background Thread 1 ] DEBUG AssetLoader          - Loading from disk: /assets/textures/Frogger/splatting_frog.png
+15:29:13.389 [FXGL Background Thread 1 ] DEBUG AssetLoader          - Loading from disk: /assets/textures/Frogger/frog_idle.png
+15:29:13.398 [FXGL Background Thread 1 ] DEBUG GameScene            - Creating render group for layer: TOP(2147483647)
+15:29:13.401 [FXGL Background Thread 1 ] DEBUG AssetLoader          - Loading from disk: /assets/textures/Frogger/full_log.png
+15:29:13.407 [FXGL Background Thread 1 ] DEBUG GameScene            - Creating render group for layer: DEFAULT(100000)
+15:29:13.409 [FXGL Background Thread 1 ] DEBUG AssetLoader          - Loading from cache: /assets/textures/Frogger/full_log.png
+15:29:13.410 [FXGL Background Thread 1 ] DEBUG AssetLoader          - Loading from disk: /assets/textures/Frogger/half_log.png
+15:29:13.411 [FXGL Background Thread 1 ] DEBUG AssetLoader          - Loading from disk: /assets/textures/Frogger/rotating_log.png
+15:29:13.414 [FXGL Background Thread 1 ] DEBUG InitAppTask          - Initializing Physics
+15:29:13.414 [FXGL Background Thread 1 ] DEBUG InitAppTask          - Initializing UI
+15:29:13.414 [FXGL Background Thread 1 ] DEBUG AssetLoader          - Loading from disk: /assets/textures/Frogger/background.jpg
+15:29:13.423 [FXGL Background Thread 1 ] DEBUG InitAppTask          - Initialization Complete
+15:29:13.424 [FXGL Background Thread 1 ] INFO  InitAppTask          - Game initialization took: 0.089 sec
+15:29:13.433 [JavaFX Application Thread] DEBUG Input                - Clearing active input actions
+15:29:13.437 [JavaFX Application Thread] DEBUG AppStateMachine      - LoadingState -> PlayState
+15:29:14.314 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from disk: /assets/textures/Frogger/green_car.png
+15:29:14.315 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from disk: /assets/textures/Frogger/red_car.png
+15:29:15.225 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/Frogger/green_car.png
+15:29:15.226 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from disk: /assets/textures/Frogger/purple_car.png
+15:29:15.462 [JavaFX Application Thread] DEBUG Input                - Mocking key release: W
+15:29:15.462 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from disk: /assets/textures/Frogger/frog_jump.png
+15:29:15.721 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/Frogger/frog_idle.png
+15:29:16.153 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/Frogger/green_car.png
+15:29:16.155 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/Frogger/green_car.png
+15:29:16.546 [JavaFX Application Thread] DEBUG Input                - Mocking key release: D
+15:29:16.547 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/Frogger/frog_jump.png
+15:29:16.793 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/Frogger/frog_idle.png
+15:29:17.042 [JavaFX Application Thread] DEBUG Input                - Mocking key release: D
+15:29:17.042 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/Frogger/frog_jump.png
+15:29:17.065 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/Frogger/red_car.png
+15:29:17.066 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/Frogger/green_car.png
+15:29:17.067 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/Frogger/half_log.png
+15:29:17.068 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/Frogger/half_log.png
+15:29:17.289 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/Frogger/frog_idle.png
+15:29:17.462 [JavaFX Application Thread] DEBUG Input                - Mocking key release: D
+15:29:17.463 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/Frogger/frog_jump.png
+15:29:17.705 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/Frogger/frog_idle.png
+15:29:17.971 [JavaFX Application Thread] DEBUG Input                - Mocking key release: W
+15:29:17.972 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/Frogger/frog_jump.png
+15:29:17.978 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from disk: /assets/textures/Frogger/orange_car.png
+15:29:17.980 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/Frogger/purple_car.png
+15:29:18.139 [JavaFX Application Thread] DEBUG Input                - Mocking key release: W
+15:29:18.140 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/Frogger/frog_jump.png
+15:29:18.233 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/Frogger/frog_idle.png
+15:29:18.309 [JavaFX Application Thread] DEBUG Input                - Mocking key release: W
+15:29:18.309 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/Frogger/frog_jump.png
+15:29:18.393 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/Frogger/frog_idle.png
+15:29:18.569 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/Frogger/frog_idle.png
+15:29:18.889 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/Frogger/purple_car.png
+15:29:18.890 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from disk: /assets/textures/Frogger/blue_car.png
+15:29:19.270 [JavaFX Application Thread] DEBUG Input                - Mocking key release: W
+15:29:19.271 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/Frogger/frog_jump.png
+15:29:19.529 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/Frogger/frog_idle.png
+15:29:19.817 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/Frogger/purple_car.png
+15:29:19.818 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/Frogger/green_car.png
+15:29:19.903 [JavaFX Application Thread] DEBUG Input                - Mocking key release: D
+15:29:19.903 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/Frogger/frog_jump.png
+15:29:20.169 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/Frogger/frog_idle.png
+15:29:20.376 [JavaFX Application Thread] DEBUG Input                - Mocking key release: W
+15:29:20.376 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/Frogger/frog_jump.png
+15:29:20.612 [JavaFX Application Thread] DEBUG Input                - Mocking key release: W
+15:29:20.612 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/Frogger/frog_jump.png
+15:29:20.633 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/Frogger/frog_idle.png
+15:29:20.729 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/Frogger/purple_car.png
+15:29:20.730 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/Frogger/red_car.png
+15:29:20.761 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/Frogger/splatting_frog.png
+15:29:20.779 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/Frogger/splatting_frog.png
+15:29:20.779 [JavaFX Application Thread] FATAL GameApplication      - Uncaught Exception:
+
+Fatal exception occurred: java.lang.NullPointerException : null
+E: Frogger.Frogger_App.splatAnimation(Frogger_App.java:163)
+E: Frogger.Frogger_App$3.onCollision(Frogger_App.java:68)
+E: com.almasb.fxgl.physics.CollisionPair.collision(CollisionPair.java:48)
+E: com.almasb.fxgl.physics.PhysicsWorld.notifyCollisions(PhysicsWorld.java:454)
+E: com.almasb.fxgl.physics.PhysicsWorld.onUpdate(PhysicsWorld.java:234)
+E: com.almasb.fxgl.app.PlayState.onUpdate(AppStates.kt:237)
+E: com.almasb.fxgl.app.State.update(State.java:73)
+E: com.almasb.fxgl.app.AppStateMachine.onUpdate(AppStateMachine.java:100)
+E: com.almasb.fxgl.app.GameApplication.stepLoop(GameApplication.java:382)
+E: com.almasb.fxgl.app.GameApplication$2.handle(GameApplication.java:348)
+E: javafx.animation.AnimationTimer$AnimationTimerReceiver.lambda$handle$485(AnimationTimer.java:57)
+E: java.security.AccessController.doPrivileged(Native Method)
+E: javafx.animation.AnimationTimer$AnimationTimerReceiver.handle(AnimationTimer.java:56)
+E: com.sun.scenario.animation.AbstractMasterTimer.timePulseImpl(AbstractMasterTimer.java:357)
+E: com.sun.scenario.animation.AbstractMasterTimer$MainLoop.run(AbstractMasterTimer.java:267)
+E: com.sun.javafx.tk.quantum.QuantumToolkit.pulse(QuantumToolkit.java:514)
+E: com.sun.javafx.tk.quantum.QuantumToolkit.pulse(QuantumToolkit.java:498)
+E: com.sun.javafx.tk.quantum.QuantumToolkit.pulseFromQueue(QuantumToolkit.java:491)
+E: com.sun.javafx.tk.quantum.QuantumToolkit.lambda$runToolkit$403(QuantumToolkit.java:319)
+E: com.sun.glass.ui.InvokeLaterDispatcher$Future.run(InvokeLaterDispatcher.java:95)
+E: com.sun.glass.ui.win.WinApplication._runLoop(Native Method)
+E: com.sun.glass.ui.win.WinApplication.lambda$null$147(WinApplication.java:177)
+E: java.lang.Thread.run(Unknown Source)
+
+15:29:20.780 [JavaFX Application Thread] FATAL GameApplication      - Application will now exit
+15:29:20.780 [JavaFX Application Thread] DEBUG GameApplication      - Stopping main loop
+15:29:23.909 [JavaFX Application Thread] DEBUG GameApplication      - Exiting game application
+15:29:23.910 [JavaFX Application Thread] DEBUG GameApplication      - Shutting down background threads
+15:29:23.910 [JavaFX Application Thread] DEBUG GameApplication      - Exiting FXGL
+15:29:23.910 [JavaFX Application Thread] DEBUG FXGL                 - Saving FXGL system data
+15:29:23.913 [JavaFX Application Thread] DEBUG DesktopFSService     - Writing to: system\fxgl.bundle
+15:29:23.918 [JavaFX Application Thread] DEBUG GameApplication      - Closing logger and exiting JavaFX

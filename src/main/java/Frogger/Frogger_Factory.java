@@ -34,8 +34,9 @@ ExpireCleanComponent trash_bin = new ExpireCleanComponent(Duration.seconds(10));
 				.type(Frogger_Types.FROG)
 				.from(data)
                 .viewFromTexture("Frogger/frog_idle.png")
-				.bbox(new HitBox(BoundingShape.box(180,192)))
 				.with(new CollidableComponent(true))
+				.bbox(new HitBox(new Point2D((180*.125)/2,(192*.125)/2), BoundingShape.box(180*.125,192*.125)))
+				.renderLayer(RenderLayer.TOP)
 				.build();
 	}
 	
@@ -53,8 +54,9 @@ ExpireCleanComponent trash_bin = new ExpireCleanComponent(Duration.seconds(10));
 	public Entity newRightLog(SpawnData data) {
 		right++;
 		int rand = FXGLMath.random(0, 1);
+		HitBox[] hits = {new HitBox(new Point2D((84*.8)/2-120, (60*.8)/2-110), BoundingShape.box(84*.8, 60*.8)),new HitBox(new Point2D((174*.8)/2-145, (60*.8)/2-110), BoundingShape.box(174*.8, 60*.8))};
+
 		String[] right_logs = {"Frogger/half_log.png", "Frogger/full_log.png"};
-		HitBox[] hits = {new HitBox(BoundingShape.box(84, 60)),new HitBox(BoundingShape.box(174, 60))};
 		return Entities.builder()
 				.type(Frogger_Types.LOG)
 				.from(data)
@@ -71,7 +73,7 @@ ExpireCleanComponent trash_bin = new ExpireCleanComponent(Duration.seconds(10));
 	public Entity newLeftLog(SpawnData data) {
 		int rand = FXGLMath.random(0, 1);
 		String[] left_logs = {"Frogger/half_log.png", "Frogger/full_log.png"};
-		HitBox[] hits = {new HitBox(BoundingShape.box(84, 60)),new HitBox(BoundingShape.box(174, 60))};
+		HitBox[] hits = {new HitBox(new Point2D((84*.8)/2-120, (60*.8)/2-110), BoundingShape.box(84*.8, 60*.8)),new HitBox(new Point2D((174*.8)/2-145, (60*.8)/2-110), BoundingShape.box(174*.8, 60*.8))};
 		return Entities.builder()
 				.type(Frogger_Types.LOG)
 				.from(data)
@@ -92,9 +94,9 @@ ExpireCleanComponent trash_bin = new ExpireCleanComponent(Duration.seconds(10));
 		return Entities.builder()
 				.type(right % 2 != 0 ? Frogger_Types.FRONT_CAR : Frogger_Types.BACK_CAR)
 				.from(data)
-				.bbox(new HitBox(BoundingShape.box(168, 120)))
+				.bbox(new HitBox(new Point2D(-(168*.35)/2, -(110*.35)/2-10), BoundingShape.box(168*.45, 120*.45)))
 				.viewFromTexture(right_cars[FXGLMath.random(0, 4)])
-				.with(new ProjectileComponent(new Point2D(-1,0), FXGLMath.random(300, 550)))
+				.with(new ProjectileComponent(new Point2D(1,0), FXGLMath.random(300, 550)))
 				.with(new CollidableComponent(true))
 				.with(trash_bin)
 				.renderLayer(RenderLayer.TOP)
@@ -109,9 +111,9 @@ ExpireCleanComponent trash_bin = new ExpireCleanComponent(Duration.seconds(10));
 		return Entities.builder()
 				.type(left % 2 != 0 ? Frogger_Types.FRONT_CAR : Frogger_Types.BACK_CAR)
 				.from(data)
-				.bbox(new HitBox(BoundingShape.box(168,120)))
+				.bbox(new HitBox(new Point2D(-(168*.35)/2,-(110*.35)/2-10), BoundingShape.box(168*.45, 120*.45)))
 				.viewFromTexture(left_cars[FXGLMath.random(0, 4)])
-				.with(new ProjectileComponent(new Point2D(1,0), FXGLMath.random(300, 550)))
+				.with(new ProjectileComponent(new Point2D(-1,0), FXGLMath.random(300, 550)))
 				.with(new CollidableComponent(true))
 				.with(trash_bin)
 				.renderLayer(RenderLayer.TOP)

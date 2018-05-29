@@ -1,9 +1,12 @@
 package Frogger;
 
+import java.util.HashMap;
+
 import com.almasb.fxgl.app.GameApplication;
 import com.almasb.fxgl.core.math.FXGLMath;
 import com.almasb.fxgl.entity.Entity;
 import com.almasb.fxgl.entity.RenderLayer;
+import com.almasb.fxgl.entity.components.CollidableComponent;
 import com.almasb.fxgl.entity.view.EntityView;
 import com.almasb.fxgl.extra.entity.components.OffscreenCleanComponent;
 import com.almasb.fxgl.extra.entity.components.ProjectileComponent;
@@ -17,6 +20,8 @@ import com.almasb.fxgl.settings.GameSettings;
 import com.almasb.fxgl.texture.AnimatedTexture;
 import com.almasb.fxgl.texture.AnimationChannel;
 import com.almasb.fxgl.texture.Texture;
+
+import javafx.geometry.Point2D;
 import javafx.scene.image.*;
 import javafx.scene.input.KeyCode;
 import javafx.util.Duration;
@@ -53,14 +58,20 @@ public class Frogger_App extends GameApplication{
 		});
 		physicsWorld.addCollisionHandler(new CollisionHandler(Frogger_Types.FROG, Frogger_Types.FRONT_CAR) {
 			@Override
-			protected void onCollisionBegin(Entity frog, Entity car) {
+			protected void onCollision(Entity frog, Entity car) {
 				splatAnimation();
 			}
 		});
 		physicsWorld.addCollisionHandler(new CollisionHandler(Frogger_Types.FROG, Frogger_Types.BACK_CAR) {
 			@Override
-			protected void onCollisionBegin(Entity frog, Entity car) {
+			protected void onCollision(Entity frog, Entity car) {
 				splatAnimation();
+			}
+		});
+		physicsWorld.addCollisionHandler(new CollisionHandler(Frogger_Types.FROG, Frogger_Types.LOG) {
+			@Override
+			protected void onCollision(Entity frog, Entity log) {
+				frog.setX(log.getCenter().getX());
 			}
 		});
 	}
@@ -72,36 +83,44 @@ public class Frogger_App extends GameApplication{
 			@Override
 			protected void onActionBegin() {
 				input.mockKeyRelease(KeyCode.W);
-				frog.setRotation(0);
-				frog.translateY(-MOVE_SPEED);
-				jumpAnimation();
+				if(frog != null) {
+					frog.setRotation(0);
+					frog.translateY(-MOVE_SPEED);
+					jumpAnimation();
+				}
 			}
 		}, KeyCode.W);
 		input.addAction(new UserAction("down") {
 			@Override
 			protected void onActionBegin() {
 				input.mockKeyRelease(KeyCode.S);
-				frog.setRotation(180);
-				frog.translateY(MOVE_SPEED);
-				jumpAnimation();
+				if(frog != null) {
+					frog.setRotation(180);
+					frog.translateY(MOVE_SPEED);
+					jumpAnimation();
+				}
 			}
 		}, KeyCode.S);
 		input.addAction(new UserAction("left") {
 			@Override
 			protected void onActionBegin() {
 				input.mockKeyRelease(KeyCode.A);
-				frog.setRotation(-90);
-				frog.translateX(-MOVE_SPEED);
-				jumpAnimation();
+				if(frog != null) {
+					frog.setRotation(-90);
+					frog.translateX(-MOVE_SPEED);
+					jumpAnimation();
+				}
 			}
 		}, KeyCode.A);
 		input.addAction(new UserAction("right") {
 			@Override
 			protected void onActionBegin() {
 				input.mockKeyRelease(KeyCode.D);
-				frog.setRotation(90);
-				frog.translateX(MOVE_SPEED);
-				jumpAnimation();
+				if(frog != null) {
+					frog.setRotation(90);
+					frog.translateX(MOVE_SPEED);
+					jumpAnimation();
+				}
 			}
 		}, KeyCode.D);		
 		input.addAction(new UserAction("testd") {
@@ -113,12 +132,16 @@ public class Frogger_App extends GameApplication{
 	}
 	
 	protected void jumpAnimation() {
-		frog.setViewFromTexture("Frogger/frog_jump.png");
-		frog.setScaleX(.18);
-		frog.setScaleY(.18);
+		if(frog != null) {
+			frog.setViewFromTexture("Frogger/frog_jump.png");
+			frog.setScaleX(.18);
+			frog.setScaleY(.18);
+		}
 		getMasterTimer().runOnceAfter(() -> {
-			frog.setViewFromTexture("Frogger/frog_idle.png");
-			scaleFrog();
+			if(frog != null) {
+				frog.setViewFromTexture("Frogger/frog_idle.png");
+				scaleFrog();
+			}
 		}, Duration.millis(250));
 	}
 	
@@ -135,12 +158,13 @@ public class Frogger_App extends GameApplication{
 	}
 
 	protected void splatAnimation() {
-//		AnimationChannel splat = new AnimationChannel("Frogger/splatting_frog.png", 4, 96/3, 32, Duration.millis(ANIM_DURATION), 0, 2);
 		AnimatedTexture splat = getAssetLoader().loadTexture("Frogger/splatting_frog.png").toAnimatedTexture(3, Duration.millis(ANIM_DURATION));
-//		AnimatedTexture splatting = new AnimatedTexture(splat);
+		scale(splat,5.5);
 		frog.setView(splat);
+		frog.getViewComponent().setAnimatedTexture(splat, false, true);
+		frog.setPosition(new Point2D(frog.getX()+55, frog.getY()+55));
+		frog = null;
 		getMasterTimer().runOnceAfter(() -> {
-			frog.removeFromWorld();
 			frog = getGameWorld().spawn("frog", START_X, START_Y);
 			scaleFrog();
 		}, Duration.millis(ANIM_DURATION));
@@ -162,11 +186,11 @@ public class Frogger_App extends GameApplication{
 		
 		getGameWorld().spawn("score_hitbox");
 		getMasterTimer().runAtInterval(() -> {
-			Entity[] cars = {getGameWorld().spawn("right_car",getWidth(), getHeight()/2-20),
-			getGameWorld().spawn("left_car", -75, getHeight()/2+75)};
+			Entity[] cars = {getGameWorld().spawn("right_car",-120, getHeight()/2+85),
+			getGameWorld().spawn("left_car",getWidth() , getHeight()/2-30)};
 			for(int i = 0; i <= 1; i++) {
-				cars[i].setScaleX(.45);
-				cars[i].setScaleY(.45);
+				cars[i].setScaleX(.35);
+				cars[i].setScaleY(.35);
 			}
 			//this statement is the same as r_log.getX() >= getWidth()/2
 			//I just wanted to show you how to write a component because
@@ -175,7 +199,6 @@ public class Frogger_App extends GameApplication{
 				spawnLogs();
 				scale(.8, r_log, l_log, m_log);	
 			}
-			splatAnimation();
 		}, Duration.seconds(.9));
 	}
 	
