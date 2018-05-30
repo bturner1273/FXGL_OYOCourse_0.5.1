@@ -11,6 +11,7 @@ import com.almasb.fxgl.physics.HitBox;
 import com.almasb.fxgl.physics.PhysicsComponent;
 import com.almasb.fxgl.physics.box2d.dynamics.BodyDef;
 import com.almasb.fxgl.physics.box2d.dynamics.BodyType;
+import com.almasb.fxgl.physics.box2d.dynamics.FixtureDef;
 import com.almasb.fxgl.texture.AnimatedTexture;
 import com.almasb.fxgl.texture.AnimationChannel;
 
@@ -77,7 +78,12 @@ public class Platformer_Factory implements EntityFactory {
 		BodyDef bd = new BodyDef();
 		bd.setType(BodyType.DYNAMIC);
 		bd.setFixedRotation(true);
+		FixtureDef fd = new FixtureDef();
+		fd.setDensity(1f);
+		fd.setRestitution(.01f);
+		fd.setFriction(20f);
 		physics.setBodyDef(bd);
+		physics.setFixtureDef(fd);
 		
 		return Entities.builder()
 				.from(data)
