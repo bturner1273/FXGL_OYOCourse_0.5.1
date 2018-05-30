@@ -30,6 +30,7 @@ public class Platformer_App extends GameApplication {
 		AnimatedTexture idle = new AnimatedTexture(
 				new AnimationChannel("Platformer/stand_sheet.png", 2, 606/2, 431, Duration.millis(300), 0, 1));
 		
+		
 		Input input = getInput();
 		input.addAction(new UserAction("run_right") {
 			@Override
@@ -74,7 +75,7 @@ public class Platformer_App extends GameApplication {
 			}
 			@Override
 			protected void onAction() {
-				
+				player.getComponent(PhysicsComponent.class).setVelocityY(-500);
 			}
 			@Override
 			protected void onActionEnd() {

@@ -74,6 +74,12 @@ public class Platformer_Factory implements EntityFactory {
 		pic.setScaleX(.25);
 		pic.setScaleY(.25);
 		
+		PlatformerAnimationComponent jump = new PlatformerAnimationComponent();
+		jump.setJumpDownImage("Platformer/jump-fall.png");
+		jump.setJumpUpImage("Platformer/jump-up.png");
+		jump.setIdleImage(pic);
+		jump.setScale(.25);
+		
 		PhysicsComponent physics = new PhysicsComponent();
 		BodyDef bd = new BodyDef();
 		bd.setType(BodyType.DYNAMIC);
@@ -90,6 +96,7 @@ public class Platformer_Factory implements EntityFactory {
 				.viewFromAnimatedTexture(pic)
 				.bbox(new HitBox(new Point2D(115, 162), BoundingShape.box(606/8, 431/4)))
 				.with(physics)
+				.with(jump)
 				.build();
 	}
 	
