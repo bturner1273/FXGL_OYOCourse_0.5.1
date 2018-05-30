@@ -14,27 +14,45 @@ public class PlatformerAnimationComponent extends Component {
 	Texture jump_up;
 	Texture jump_down;
 	AnimatedTexture idle;
+	double min_run_speed;
 	boolean right = true;
 	
 	@Override
 	public void onUpdate(double tpf) {
-		if(entity.getComponent(PhysicsComponent.class).getVelocityX() < -10) {
+		//set left or right
+		if(entity.getComponent(PhysicsComponent.class).getVelocityX() < -min_run_speed) {
 			setScale(scaleNeg);
 			right = false;
-		}else if(entity.getComponent(PhysicsComponent.class).getVelocityX() > 10) {
+		}else if(entity.getComponent(PhysicsComponent.class).getVelocityX() > min_run_speed) {
 			setScale(scalePos);
 			right = true;
 		}
+		//running animations
+		
+		//jump and idle
 		if(entity.getComponent(PhysicsComponent.class).getVelocityY() < 0) {
 			entity.setView(jump_up);
 		}
 		else if(entity.getComponent(PhysicsComponent.class).getVelocityY() > 0) {
 			entity.setView(jump_down);
 		}
+		
+		//need to add velocityX conditions
 		else if(entity.getComponent(PhysicsComponent.class).getVelocityY() < 10 &&
-			entity.getComponent(PhysicsComponent.class).getVelocityY() > -10) {
-			entity.setView(idle);
+			entity.getComponent(PhysicsComponent.class).getVelocityY() > -10 &&
+			entity.getComponent(PhysicsComponent.class).getVelocityX() > -min_run_speed &&
+			entity.getComponent(PhysicsComponent.class).getVelocityX() < min_run_speed) {
+			
+				entity.setView(idle);
 		}
+	}
+	
+	public void setMinRunSpeed(double speed) {
+		min_run_speed = speed;
+	}
+	
+	public double getMinRunSpeed() {
+		return min_run_speed;
 	}
 	
 	public void setJumpUpImage(String image_path) {

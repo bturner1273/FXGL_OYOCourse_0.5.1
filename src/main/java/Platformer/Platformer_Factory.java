@@ -78,6 +78,7 @@ public class Platformer_Factory implements EntityFactory {
 		jump.setJumpDownImage("Platformer/jump-fall.png");
 		jump.setJumpUpImage("Platformer/jump-up.png");
 		jump.setIdleImage(pic);
+		jump.setMinRunSpeed(10);
 		jump.setScale(.25);
 		
 		PhysicsComponent physics = new PhysicsComponent();
