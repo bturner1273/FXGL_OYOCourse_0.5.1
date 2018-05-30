@@ -55,6 +55,7 @@ public class Platformer_App extends GameApplication {
 			@Override
 			protected void onActionBegin() {
 				running.setScaleX(-.25);
+				running.setScaleY(.25);
 				player.getViewComponent().setAnimatedTexture(running, true, false);
 			}
 			@Override

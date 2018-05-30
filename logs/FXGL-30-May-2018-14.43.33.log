@@ -1,0 +1,162 @@
+14:43:18.157 [JavaFX Application Thread] DEBUG GameApplication      - Logger initialized
+14:43:18.163 [JavaFX Application Thread] DEBUG MainWindow           - Creating a JavaFX scene
+14:43:18.231 [JavaFX Application Thread] DEBUG MainWindow           - Target settings size: 700.0 x 490.0
+14:43:18.231 [JavaFX Application Thread] DEBUG MainWindow           - Scaled scene size:    700.0 x 490.0
+14:43:18.231 [JavaFX Application Thread] DEBUG MainWindow           - Scaled ratio: (1.0, 1.0)
+14:43:18.236 [JavaFX Application Thread] DEBUG GameApplication      - Starting FXGL
+14:43:18.246 [JavaFX Application Thread] INFO  FXGL                 - FXGL-0.5.1 on DESKTOP
+14:43:18.246 [JavaFX Application Thread] INFO  FXGL                 - Source code and latest versions at: https://github.com/AlmasB/FXGL
+14:43:18.246 [JavaFX Application Thread] INFO  FXGL                 -              Join the FXGL chat at: https://gitter.im/AlmasB/FXGL
+14:43:18.251 [JavaFX Application Thread] DEBUG FS                   - Loaded DesktopFSService
+14:43:18.252 [JavaFX Application Thread] DEBUG FXGL                 - Loading FXGL system data
+14:43:18.258 [JavaFX Application Thread] DEBUG DesktopFSService     - Reading from: system\fxgl.bundle
+14:43:18.264 [JavaFX Application Thread] DEBUG Bundle               - Logging bundle: FXGL
+14:43:18.266 [JavaFX Application Thread] DEBUG Bundle               - FXGL.offline.timer.version.check=2018-05-24T09:09:49.283
+14:43:18.287 [JavaFX Application Thread] DEBUG GameApplication      - FXGL started
+14:43:18.287 [JavaFX Application Thread] DEBUG GameApplication      - Logging game settings
+Title: Platformer
+Version: 
+Width: 700
+Height: 490
+Fullscreen: false
+Intro: false
+Menus: false
+Profiling: false
+Single step:false
+App Mode: DEVELOPER
+Menu Key: ESCAPE
+Stage Style: DECORATED
+Scene Factory: class com.almasb.fxgl.scene.SceneFactory
+Dialog Factory: class com.almasb.fxgl.ui.FXGLDialogFactory
+UI Factory: class com.almasb.fxgl.ui.FXGLUIFactory
+Notification Service: class com.almasb.fxgl.gameplay.notification.XboxNotificationView
+Exception Handler: class com.almasb.fxgl.app.FXGLExceptionHandler
+14:43:18.288 [JavaFX Application Thread] DEBUG GameApplication      - Configuring GameApplication
+14:43:18.288 [JavaFX Application Thread] DEBUG GameApplication      - Initializing state machine and application states
+14:43:18.298 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from disk: /assets/ui/cursors/fxgl_default.png
+14:43:18.315 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from disk: /assets/ui/cursors/fxgl_default.png
+14:43:18.332 [JavaFX Application Thread] DEBUG FXGLAssets           - Loading FXGLAssets
+14:43:18.356 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from disk: /assets/ui/fonts/VarelaRound-Regular.ttf
+14:43:18.480 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from disk: /assets/ui/fonts/lucida_console.ttf
+14:43:18.489 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from disk: /assets/ui/css/fxgl_dark.css
+14:43:18.512 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from disk: /assets/ui/cursors/fxgl_default.png
+14:43:18.537 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from disk: /assets/ui/cursors/fxgl_default.png
+14:43:18.550 [JavaFX Application Thread] DEBUG GameScene            - Game scene initialized: 700x490
+14:43:18.552 [JavaFX Application Thread] DEBUG GameWorld            - Game world initialized
+14:43:18.589 [JavaFX Application Thread] DEBUG PhysicsWorld         - Physics world initialized: appHeight=490, physics.ppm=50.0
+14:43:18.605 [JavaFX Application Thread] DEBUG Input                - Registered new binding: Pause - Esc
+14:43:18.619 [JavaFX Application Thread] DEBUG Input                - Clearing active input actions
+14:43:18.649 [JavaFX Application Thread] DEBUG AppStateMachine      - StartupState -> StartupState
+14:43:18.652 [JavaFX Application Thread] INFO  GameApplication      - Game configuration took:  0.364 sec
+14:43:18.654 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from disk: /assets/textures/fxgl_icon.png
+14:43:18.663 [JavaFX Application Thread] DEBUG MainWindow           - Opening main window
+14:43:18.795 [JavaFX Application Thread] DEBUG MainWindow           - Window border size: (4.0, 26.66668701171875)
+14:43:18.795 [JavaFX Application Thread] DEBUG MainWindow           - Scaled size: 700.0 x 490.0
+14:43:18.795 [JavaFX Application Thread] DEBUG MainWindow           - Scaled ratio: (1.0, 1.0)
+14:43:18.795 [JavaFX Application Thread] DEBUG MainWindow           - Scene size: 700.0 x 490.0
+14:43:18.795 [JavaFX Application Thread] DEBUG MainWindow           - Stage size: 704.0 x 516.6666870117188
+14:43:18.795 [JavaFX Application Thread] DEBUG GameApplication      - Running preInit()
+14:43:18.797 [JavaFX Application Thread] DEBUG Input                - Registered new binding: Screenshot - P
+14:43:18.797 [JavaFX Application Thread] DEBUG Input                - Registered new binding: Dev Options - CTRL+0
+14:43:18.797 [JavaFX Application Thread] DEBUG Input                - Registered new binding: System info dump - CTRL+9
+14:43:18.798 [JavaFX Application Thread] DEBUG Input                - Registered new binding: Restart - CTRL+R
+14:43:18.801 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from disk: /assets/textures/Platformer/run_sheet.png
+14:43:18.832 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from disk: /assets/textures/Platformer/stand_sheet.png
+14:43:18.838 [JavaFX Application Thread] DEBUG Input                - Registered new binding: run_right - Right
+14:43:18.838 [JavaFX Application Thread] DEBUG Input                - Registered new binding: run_left - Left
+14:43:18.839 [JavaFX Application Thread] DEBUG Input                - Registered new binding: jump - Up
+14:43:18.865 [JavaFX Application Thread] DEBUG GameApplication      - Starting main loop
+14:43:18.866 [JavaFX Application Thread] DEBUG StartupState         - STARTUP
+14:43:18.866 [JavaFX Application Thread] DEBUG GameApplication      - Starting new game
+14:43:18.867 [JavaFX Application Thread] DEBUG Input                - Clearing active input actions
+14:43:18.872 [JavaFX Application Thread] DEBUG AppStateMachine      - StartupState -> LoadingState
+14:43:18.877 [FXGL Background Thread 1 ] DEBUG InitAppTask          - Clearing previous game
+14:43:18.877 [FXGL Background Thread 1 ] DEBUG GameWorld            - Clearing game world
+14:43:18.877 [FXGL Background Thread 1 ] DEBUG PhysicsWorld         - Clearing physics world
+14:43:18.877 [FXGL Background Thread 1 ] DEBUG GameScene            - Clearing game scene
+14:43:18.878 [FXGL Background Thread 1 ] DEBUG InitAppTask          - Initializing Game
+14:43:18.896 [FXGL Background Thread 1 ] DEBUG AssetLoader          - Loading from disk: /assets/tmx/platformer_map_1.tmx
+14:43:18.916 [FXGL Background Thread 1 ] WARN  TMXParser            - TiledMap generated from 1.1.5. Supported version: 1.1.2. Some features may not be parsed fully.
+14:43:18.934 [FXGL Background Thread 1 ] DEBUG GameWorld            - Clearing removable entities
+14:43:18.934 [FXGL Background Thread 1 ] DEBUG GameWorld            - Setting level from map
+14:43:18.955 [FXGL Background Thread 1 ] DEBUG AssetLoader          - Loading from disk: /assets/textures/map_tiles.png
+14:43:18.968 [FXGL Background Thread 1 ] DEBUG AssetLoader          - Loading from cache: /assets/textures/map_tiles.png
+14:43:18.969 [FXGL Background Thread 1 ] DEBUG AssetLoader          - Loading from cache: /assets/textures/map_tiles.png
+14:43:18.969 [FXGL Background Thread 1 ] DEBUG AssetLoader          - Loading from cache: /assets/textures/map_tiles.png
+14:43:18.969 [FXGL Background Thread 1 ] DEBUG AssetLoader          - Loading from cache: /assets/textures/map_tiles.png
+14:43:18.970 [FXGL Background Thread 1 ] DEBUG AssetLoader          - Loading from cache: /assets/textures/map_tiles.png
+14:43:18.970 [FXGL Background Thread 1 ] DEBUG AssetLoader          - Loading from cache: /assets/textures/map_tiles.png
+14:43:18.970 [FXGL Background Thread 1 ] DEBUG AssetLoader          - Loading from cache: /assets/textures/map_tiles.png
+14:43:18.971 [FXGL Background Thread 1 ] DEBUG AssetLoader          - Loading from cache: /assets/textures/map_tiles.png
+14:43:18.971 [FXGL Background Thread 1 ] DEBUG AssetLoader          - Loading from cache: /assets/textures/map_tiles.png
+14:43:18.971 [FXGL Background Thread 1 ] DEBUG AssetLoader          - Loading from cache: /assets/textures/map_tiles.png
+14:43:18.971 [FXGL Background Thread 1 ] DEBUG AssetLoader          - Loading from cache: /assets/textures/map_tiles.png
+14:43:18.971 [FXGL Background Thread 1 ] DEBUG AssetLoader          - Loading from cache: /assets/textures/map_tiles.png
+14:43:18.971 [FXGL Background Thread 1 ] DEBUG AssetLoader          - Loading from cache: /assets/textures/map_tiles.png
+14:43:18.972 [FXGL Background Thread 1 ] DEBUG AssetLoader          - Loading from cache: /assets/textures/map_tiles.png
+14:43:18.972 [FXGL Background Thread 1 ] DEBUG AssetLoader          - Loading from cache: /assets/textures/map_tiles.png
+14:43:18.972 [FXGL Background Thread 1 ] DEBUG AssetLoader          - Loading from cache: /assets/textures/map_tiles.png
+14:43:18.972 [FXGL Background Thread 1 ] DEBUG AssetLoader          - Loading from cache: /assets/textures/map_tiles.png
+14:43:18.972 [FXGL Background Thread 1 ] DEBUG AssetLoader          - Loading from cache: /assets/textures/map_tiles.png
+14:43:18.973 [FXGL Background Thread 1 ] DEBUG AssetLoader          - Loading from cache: /assets/textures/map_tiles.png
+14:43:18.973 [FXGL Background Thread 1 ] DEBUG AssetLoader          - Loading from cache: /assets/textures/map_tiles.png
+14:43:18.973 [FXGL Background Thread 1 ] DEBUG AssetLoader          - Loading from cache: /assets/textures/map_tiles.png
+14:43:18.973 [FXGL Background Thread 1 ] DEBUG AssetLoader          - Loading from cache: /assets/textures/map_tiles.png
+14:43:18.973 [FXGL Background Thread 1 ] DEBUG AssetLoader          - Loading from cache: /assets/textures/map_tiles.png
+14:43:18.973 [FXGL Background Thread 1 ] DEBUG AssetLoader          - Loading from cache: /assets/textures/map_tiles.png
+14:43:18.974 [FXGL Background Thread 1 ] DEBUG AssetLoader          - Loading from cache: /assets/textures/map_tiles.png
+14:43:18.974 [FXGL Background Thread 1 ] DEBUG AssetLoader          - Loading from cache: /assets/textures/map_tiles.png
+14:43:18.974 [FXGL Background Thread 1 ] DEBUG AssetLoader          - Loading from cache: /assets/textures/map_tiles.png
+14:43:18.974 [FXGL Background Thread 1 ] DEBUG AssetLoader          - Loading from cache: /assets/textures/map_tiles.png
+14:43:18.974 [FXGL Background Thread 1 ] DEBUG AssetLoader          - Loading from cache: /assets/textures/map_tiles.png
+14:43:18.974 [FXGL Background Thread 1 ] DEBUG AssetLoader          - Loading from cache: /assets/textures/map_tiles.png
+14:43:18.975 [FXGL Background Thread 1 ] DEBUG AssetLoader          - Loading from cache: /assets/textures/map_tiles.png
+14:43:18.975 [FXGL Background Thread 1 ] DEBUG AssetLoader          - Loading from cache: /assets/textures/map_tiles.png
+14:43:18.975 [FXGL Background Thread 1 ] DEBUG AssetLoader          - Loading from cache: /assets/textures/map_tiles.png
+14:43:18.975 [FXGL Background Thread 1 ] DEBUG AssetLoader          - Loading from cache: /assets/textures/map_tiles.png
+14:43:18.975 [FXGL Background Thread 1 ] DEBUG AssetLoader          - Loading from cache: /assets/textures/map_tiles.png
+14:43:18.975 [FXGL Background Thread 1 ] DEBUG AssetLoader          - Loading from cache: /assets/textures/map_tiles.png
+14:43:18.976 [FXGL Background Thread 1 ] DEBUG AssetLoader          - Loading from cache: /assets/textures/map_tiles.png
+14:43:18.976 [FXGL Background Thread 1 ] DEBUG AssetLoader          - Loading from cache: /assets/textures/map_tiles.png
+14:43:18.976 [FXGL Background Thread 1 ] DEBUG AssetLoader          - Loading from cache: /assets/textures/map_tiles.png
+14:43:18.976 [FXGL Background Thread 1 ] DEBUG AssetLoader          - Loading from cache: /assets/textures/map_tiles.png
+14:43:18.976 [FXGL Background Thread 1 ] DEBUG AssetLoader          - Loading from cache: /assets/textures/map_tiles.png
+14:43:18.976 [FXGL Background Thread 1 ] DEBUG AssetLoader          - Loading from cache: /assets/textures/map_tiles.png
+14:43:18.976 [FXGL Background Thread 1 ] DEBUG AssetLoader          - Loading from cache: /assets/textures/map_tiles.png
+14:43:18.977 [FXGL Background Thread 1 ] DEBUG AssetLoader          - Loading from cache: /assets/textures/map_tiles.png
+14:43:18.977 [FXGL Background Thread 1 ] DEBUG AssetLoader          - Loading from cache: /assets/textures/map_tiles.png
+14:43:18.977 [FXGL Background Thread 1 ] DEBUG AssetLoader          - Loading from cache: /assets/textures/map_tiles.png
+14:43:18.977 [FXGL Background Thread 1 ] DEBUG AssetLoader          - Loading from cache: /assets/textures/map_tiles.png
+14:43:18.977 [FXGL Background Thread 1 ] DEBUG AssetLoader          - Loading from cache: /assets/textures/map_tiles.png
+14:43:18.977 [FXGL Background Thread 1 ] DEBUG AssetLoader          - Loading from cache: /assets/textures/map_tiles.png
+14:43:18.977 [FXGL Background Thread 1 ] DEBUG AssetLoader          - Loading from cache: /assets/textures/map_tiles.png
+14:43:18.977 [FXGL Background Thread 1 ] DEBUG AssetLoader          - Loading from cache: /assets/textures/map_tiles.png
+14:43:18.977 [FXGL Background Thread 1 ] DEBUG AssetLoader          - Loading from cache: /assets/textures/map_tiles.png
+14:43:18.977 [FXGL Background Thread 1 ] DEBUG AssetLoader          - Loading from cache: /assets/textures/map_tiles.png
+14:43:18.978 [FXGL Background Thread 1 ] DEBUG AssetLoader          - Loading from cache: /assets/textures/map_tiles.png
+14:43:18.978 [FXGL Background Thread 1 ] DEBUG AssetLoader          - Loading from cache: /assets/textures/map_tiles.png
+14:43:18.978 [FXGL Background Thread 1 ] DEBUG AssetLoader          - Loading from cache: /assets/textures/map_tiles.png
+14:43:18.978 [FXGL Background Thread 1 ] DEBUG AssetLoader          - Loading from cache: /assets/textures/map_tiles.png
+14:43:18.978 [FXGL Background Thread 1 ] DEBUG AssetLoader          - Loading from cache: /assets/textures/map_tiles.png
+14:43:18.978 [FXGL Background Thread 1 ] DEBUG AssetLoader          - Loading from cache: /assets/textures/map_tiles.png
+14:43:18.978 [FXGL Background Thread 1 ] DEBUG AssetLoader          - Loading from cache: /assets/textures/map_tiles.png
+14:43:18.978 [FXGL Background Thread 1 ] DEBUG AssetLoader          - Loading from cache: /assets/textures/map_tiles.png
+14:43:18.978 [FXGL Background Thread 1 ] DEBUG AssetLoader          - Loading from cache: /assets/textures/map_tiles.png
+14:43:18.980 [FXGL Background Thread 1 ] DEBUG GameScene            - Creating render group for layer: BACKGROUND(1000)
+14:43:19.023 [FXGL Background Thread 1 ] DEBUG GameScene            - Creating render group for layer: DEFAULT(100000)
+14:43:19.041 [FXGL Background Thread 1 ] DEBUG AssetLoader          - Loading from cache: /assets/textures/Platformer/stand_sheet.png
+14:43:19.041 [FXGL Background Thread 1 ] DEBUG AssetLoader          - Loading from cache: /assets/textures/Platformer/run_sheet.png
+14:43:19.042 [FXGL Background Thread 1 ] DEBUG AssetLoader          - Loading from disk: /assets/textures/Platformer/jump-fall.png
+14:43:19.045 [FXGL Background Thread 1 ] DEBUG AssetLoader          - Loading from disk: /assets/textures/Platformer/jump-up.png
+14:43:19.051 [FXGL Background Thread 1 ] DEBUG InitAppTask          - Initializing Physics
+14:43:19.051 [FXGL Background Thread 1 ] DEBUG InitAppTask          - Initializing UI
+14:43:19.051 [FXGL Background Thread 1 ] DEBUG InitAppTask          - Initialization Complete
+14:43:19.051 [FXGL Background Thread 1 ] INFO  InitAppTask          - Game initialization took: 0.175 sec
+14:43:19.053 [JavaFX Application Thread] DEBUG Input                - Clearing active input actions
+14:43:19.059 [JavaFX Application Thread] DEBUG AppStateMachine      - LoadingState -> PlayState
+14:43:33.097 [JavaFX Application Thread] DEBUG GameApplication      - Exiting game application
+14:43:33.098 [JavaFX Application Thread] DEBUG GameApplication      - Shutting down background threads
+14:43:33.099 [JavaFX Application Thread] DEBUG GameApplication      - Exiting FXGL
+14:43:33.099 [JavaFX Application Thread] DEBUG FXGL                 - Saving FXGL system data
+14:43:33.101 [JavaFX Application Thread] DEBUG DesktopFSService     - Writing to: system\fxgl.bundle
+14:43:33.105 [JavaFX Application Thread] DEBUG GameApplication      - Closing logger and exiting JavaFX

@@ -1,0 +1,451 @@
+14:42:19.246 [JavaFX Application Thread] DEBUG GameApplication      - Logger initialized
+14:42:19.252 [JavaFX Application Thread] DEBUG MainWindow           - Creating a JavaFX scene
+14:42:19.326 [JavaFX Application Thread] DEBUG MainWindow           - Target settings size: 700.0 x 490.0
+14:42:19.326 [JavaFX Application Thread] DEBUG MainWindow           - Scaled scene size:    700.0 x 490.0
+14:42:19.327 [JavaFX Application Thread] DEBUG MainWindow           - Scaled ratio: (1.0, 1.0)
+14:42:19.331 [JavaFX Application Thread] DEBUG GameApplication      - Starting FXGL
+14:42:19.342 [JavaFX Application Thread] INFO  FXGL                 - FXGL-0.5.1 on DESKTOP
+14:42:19.342 [JavaFX Application Thread] INFO  FXGL                 - Source code and latest versions at: https://github.com/AlmasB/FXGL
+14:42:19.342 [JavaFX Application Thread] INFO  FXGL                 -              Join the FXGL chat at: https://gitter.im/AlmasB/FXGL
+14:42:19.348 [JavaFX Application Thread] DEBUG FS                   - Loaded DesktopFSService
+14:42:19.348 [JavaFX Application Thread] DEBUG FXGL                 - Loading FXGL system data
+14:42:19.357 [JavaFX Application Thread] DEBUG DesktopFSService     - Reading from: system\fxgl.bundle
+14:42:19.365 [JavaFX Application Thread] DEBUG Bundle               - Logging bundle: FXGL
+14:42:19.366 [JavaFX Application Thread] DEBUG Bundle               - FXGL.offline.timer.version.check=2018-05-24T09:09:49.283
+14:42:19.394 [JavaFX Application Thread] DEBUG GameApplication      - FXGL started
+14:42:19.395 [JavaFX Application Thread] DEBUG GameApplication      - Logging game settings
+Title: Platformer
+Version: 
+Width: 700
+Height: 490
+Fullscreen: false
+Intro: false
+Menus: false
+Profiling: false
+Single step:false
+App Mode: DEVELOPER
+Menu Key: ESCAPE
+Stage Style: DECORATED
+Scene Factory: class com.almasb.fxgl.scene.SceneFactory
+Dialog Factory: class com.almasb.fxgl.ui.FXGLDialogFactory
+UI Factory: class com.almasb.fxgl.ui.FXGLUIFactory
+Notification Service: class com.almasb.fxgl.gameplay.notification.XboxNotificationView
+Exception Handler: class com.almasb.fxgl.app.FXGLExceptionHandler
+14:42:19.396 [JavaFX Application Thread] DEBUG GameApplication      - Configuring GameApplication
+14:42:19.396 [JavaFX Application Thread] DEBUG GameApplication      - Initializing state machine and application states
+14:42:19.407 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from disk: /assets/ui/cursors/fxgl_default.png
+14:42:19.425 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from disk: /assets/ui/cursors/fxgl_default.png
+14:42:19.444 [JavaFX Application Thread] DEBUG FXGLAssets           - Loading FXGLAssets
+14:42:19.469 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from disk: /assets/ui/fonts/VarelaRound-Regular.ttf
+14:42:19.590 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from disk: /assets/ui/fonts/lucida_console.ttf
+14:42:19.598 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from disk: /assets/ui/css/fxgl_dark.css
+14:42:19.622 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from disk: /assets/ui/cursors/fxgl_default.png
+14:42:19.645 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from disk: /assets/ui/cursors/fxgl_default.png
+14:42:19.659 [JavaFX Application Thread] DEBUG GameScene            - Game scene initialized: 700x490
+14:42:19.661 [JavaFX Application Thread] DEBUG GameWorld            - Game world initialized
+14:42:19.699 [JavaFX Application Thread] DEBUG PhysicsWorld         - Physics world initialized: appHeight=490, physics.ppm=50.0
+14:42:19.714 [JavaFX Application Thread] DEBUG Input                - Registered new binding: Pause - Esc
+14:42:19.728 [JavaFX Application Thread] DEBUG Input                - Clearing active input actions
+14:42:19.757 [JavaFX Application Thread] DEBUG AppStateMachine      - StartupState -> StartupState
+14:42:19.760 [JavaFX Application Thread] INFO  GameApplication      - Game configuration took:  0.364 sec
+14:42:19.762 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from disk: /assets/textures/fxgl_icon.png
+14:42:19.772 [JavaFX Application Thread] DEBUG MainWindow           - Opening main window
+14:42:19.907 [JavaFX Application Thread] DEBUG MainWindow           - Window border size: (4.0, 26.66668701171875)
+14:42:19.907 [JavaFX Application Thread] DEBUG MainWindow           - Scaled size: 700.0 x 490.0
+14:42:19.907 [JavaFX Application Thread] DEBUG MainWindow           - Scaled ratio: (1.0, 1.0)
+14:42:19.907 [JavaFX Application Thread] DEBUG MainWindow           - Scene size: 700.0 x 490.0
+14:42:19.907 [JavaFX Application Thread] DEBUG MainWindow           - Stage size: 704.0 x 516.6666870117188
+14:42:19.908 [JavaFX Application Thread] DEBUG GameApplication      - Running preInit()
+14:42:19.909 [JavaFX Application Thread] DEBUG Input                - Registered new binding: Screenshot - P
+14:42:19.909 [JavaFX Application Thread] DEBUG Input                - Registered new binding: Dev Options - CTRL+0
+14:42:19.910 [JavaFX Application Thread] DEBUG Input                - Registered new binding: System info dump - CTRL+9
+14:42:19.910 [JavaFX Application Thread] DEBUG Input                - Registered new binding: Restart - CTRL+R
+14:42:19.914 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from disk: /assets/textures/Platformer/run_sheet.png
+14:42:19.944 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from disk: /assets/textures/Platformer/stand_sheet.png
+14:42:19.951 [JavaFX Application Thread] DEBUG Input                - Registered new binding: run_right - Right
+14:42:19.951 [JavaFX Application Thread] DEBUG Input                - Registered new binding: run_left - Left
+14:42:19.951 [JavaFX Application Thread] DEBUG Input                - Registered new binding: jump - Up
+14:42:19.977 [JavaFX Application Thread] DEBUG GameApplication      - Starting main loop
+14:42:19.979 [JavaFX Application Thread] DEBUG StartupState         - STARTUP
+14:42:19.980 [JavaFX Application Thread] DEBUG GameApplication      - Starting new game
+14:42:19.980 [JavaFX Application Thread] DEBUG Input                - Clearing active input actions
+14:42:19.985 [JavaFX Application Thread] DEBUG AppStateMachine      - StartupState -> LoadingState
+14:42:19.989 [FXGL Background Thread 1 ] DEBUG InitAppTask          - Clearing previous game
+14:42:19.989 [FXGL Background Thread 1 ] DEBUG GameWorld            - Clearing game world
+14:42:19.989 [FXGL Background Thread 1 ] DEBUG PhysicsWorld         - Clearing physics world
+14:42:19.990 [FXGL Background Thread 1 ] DEBUG GameScene            - Clearing game scene
+14:42:19.991 [FXGL Background Thread 1 ] DEBUG InitAppTask          - Initializing Game
+14:42:20.008 [FXGL Background Thread 1 ] DEBUG AssetLoader          - Loading from disk: /assets/tmx/platformer_map_1.tmx
+14:42:20.027 [FXGL Background Thread 1 ] WARN  TMXParser            - TiledMap generated from 1.1.5. Supported version: 1.1.2. Some features may not be parsed fully.
+14:42:20.046 [FXGL Background Thread 1 ] DEBUG GameWorld            - Clearing removable entities
+14:42:20.046 [FXGL Background Thread 1 ] DEBUG GameWorld            - Setting level from map
+14:42:20.070 [FXGL Background Thread 1 ] DEBUG AssetLoader          - Loading from disk: /assets/textures/map_tiles.png
+14:42:20.083 [FXGL Background Thread 1 ] DEBUG AssetLoader          - Loading from cache: /assets/textures/map_tiles.png
+14:42:20.084 [FXGL Background Thread 1 ] DEBUG AssetLoader          - Loading from cache: /assets/textures/map_tiles.png
+14:42:20.084 [FXGL Background Thread 1 ] DEBUG AssetLoader          - Loading from cache: /assets/textures/map_tiles.png
+14:42:20.084 [FXGL Background Thread 1 ] DEBUG AssetLoader          - Loading from cache: /assets/textures/map_tiles.png
+14:42:20.084 [FXGL Background Thread 1 ] DEBUG AssetLoader          - Loading from cache: /assets/textures/map_tiles.png
+14:42:20.084 [FXGL Background Thread 1 ] DEBUG AssetLoader          - Loading from cache: /assets/textures/map_tiles.png
+14:42:20.084 [FXGL Background Thread 1 ] DEBUG AssetLoader          - Loading from cache: /assets/textures/map_tiles.png
+14:42:20.084 [FXGL Background Thread 1 ] DEBUG AssetLoader          - Loading from cache: /assets/textures/map_tiles.png
+14:42:20.084 [FXGL Background Thread 1 ] DEBUG AssetLoader          - Loading from cache: /assets/textures/map_tiles.png
+14:42:20.084 [FXGL Background Thread 1 ] DEBUG AssetLoader          - Loading from cache: /assets/textures/map_tiles.png
+14:42:20.085 [FXGL Background Thread 1 ] DEBUG AssetLoader          - Loading from cache: /assets/textures/map_tiles.png
+14:42:20.085 [FXGL Background Thread 1 ] DEBUG AssetLoader          - Loading from cache: /assets/textures/map_tiles.png
+14:42:20.085 [FXGL Background Thread 1 ] DEBUG AssetLoader          - Loading from cache: /assets/textures/map_tiles.png
+14:42:20.085 [FXGL Background Thread 1 ] DEBUG AssetLoader          - Loading from cache: /assets/textures/map_tiles.png
+14:42:20.085 [FXGL Background Thread 1 ] DEBUG AssetLoader          - Loading from cache: /assets/textures/map_tiles.png
+14:42:20.085 [FXGL Background Thread 1 ] DEBUG AssetLoader          - Loading from cache: /assets/textures/map_tiles.png
+14:42:20.085 [FXGL Background Thread 1 ] DEBUG AssetLoader          - Loading from cache: /assets/textures/map_tiles.png
+14:42:20.085 [FXGL Background Thread 1 ] DEBUG AssetLoader          - Loading from cache: /assets/textures/map_tiles.png
+14:42:20.085 [FXGL Background Thread 1 ] DEBUG AssetLoader          - Loading from cache: /assets/textures/map_tiles.png
+14:42:20.086 [FXGL Background Thread 1 ] DEBUG AssetLoader          - Loading from cache: /assets/textures/map_tiles.png
+14:42:20.086 [FXGL Background Thread 1 ] DEBUG AssetLoader          - Loading from cache: /assets/textures/map_tiles.png
+14:42:20.086 [FXGL Background Thread 1 ] DEBUG AssetLoader          - Loading from cache: /assets/textures/map_tiles.png
+14:42:20.086 [FXGL Background Thread 1 ] DEBUG AssetLoader          - Loading from cache: /assets/textures/map_tiles.png
+14:42:20.086 [FXGL Background Thread 1 ] DEBUG AssetLoader          - Loading from cache: /assets/textures/map_tiles.png
+14:42:20.086 [FXGL Background Thread 1 ] DEBUG AssetLoader          - Loading from cache: /assets/textures/map_tiles.png
+14:42:20.086 [FXGL Background Thread 1 ] DEBUG AssetLoader          - Loading from cache: /assets/textures/map_tiles.png
+14:42:20.086 [FXGL Background Thread 1 ] DEBUG AssetLoader          - Loading from cache: /assets/textures/map_tiles.png
+14:42:20.086 [FXGL Background Thread 1 ] DEBUG AssetLoader          - Loading from cache: /assets/textures/map_tiles.png
+14:42:20.086 [FXGL Background Thread 1 ] DEBUG AssetLoader          - Loading from cache: /assets/textures/map_tiles.png
+14:42:20.087 [FXGL Background Thread 1 ] DEBUG AssetLoader          - Loading from cache: /assets/textures/map_tiles.png
+14:42:20.087 [FXGL Background Thread 1 ] DEBUG AssetLoader          - Loading from cache: /assets/textures/map_tiles.png
+14:42:20.087 [FXGL Background Thread 1 ] DEBUG AssetLoader          - Loading from cache: /assets/textures/map_tiles.png
+14:42:20.087 [FXGL Background Thread 1 ] DEBUG AssetLoader          - Loading from cache: /assets/textures/map_tiles.png
+14:42:20.087 [FXGL Background Thread 1 ] DEBUG AssetLoader          - Loading from cache: /assets/textures/map_tiles.png
+14:42:20.087 [FXGL Background Thread 1 ] DEBUG AssetLoader          - Loading from cache: /assets/textures/map_tiles.png
+14:42:20.087 [FXGL Background Thread 1 ] DEBUG AssetLoader          - Loading from cache: /assets/textures/map_tiles.png
+14:42:20.087 [FXGL Background Thread 1 ] DEBUG AssetLoader          - Loading from cache: /assets/textures/map_tiles.png
+14:42:20.087 [FXGL Background Thread 1 ] DEBUG AssetLoader          - Loading from cache: /assets/textures/map_tiles.png
+14:42:20.088 [FXGL Background Thread 1 ] DEBUG AssetLoader          - Loading from cache: /assets/textures/map_tiles.png
+14:42:20.088 [FXGL Background Thread 1 ] DEBUG AssetLoader          - Loading from cache: /assets/textures/map_tiles.png
+14:42:20.088 [FXGL Background Thread 1 ] DEBUG AssetLoader          - Loading from cache: /assets/textures/map_tiles.png
+14:42:20.088 [FXGL Background Thread 1 ] DEBUG AssetLoader          - Loading from cache: /assets/textures/map_tiles.png
+14:42:20.088 [FXGL Background Thread 1 ] DEBUG AssetLoader          - Loading from cache: /assets/textures/map_tiles.png
+14:42:20.088 [FXGL Background Thread 1 ] DEBUG AssetLoader          - Loading from cache: /assets/textures/map_tiles.png
+14:42:20.088 [FXGL Background Thread 1 ] DEBUG AssetLoader          - Loading from cache: /assets/textures/map_tiles.png
+14:42:20.088 [FXGL Background Thread 1 ] DEBUG AssetLoader          - Loading from cache: /assets/textures/map_tiles.png
+14:42:20.089 [FXGL Background Thread 1 ] DEBUG AssetLoader          - Loading from cache: /assets/textures/map_tiles.png
+14:42:20.089 [FXGL Background Thread 1 ] DEBUG AssetLoader          - Loading from cache: /assets/textures/map_tiles.png
+14:42:20.089 [FXGL Background Thread 1 ] DEBUG AssetLoader          - Loading from cache: /assets/textures/map_tiles.png
+14:42:20.089 [FXGL Background Thread 1 ] DEBUG AssetLoader          - Loading from cache: /assets/textures/map_tiles.png
+14:42:20.089 [FXGL Background Thread 1 ] DEBUG AssetLoader          - Loading from cache: /assets/textures/map_tiles.png
+14:42:20.089 [FXGL Background Thread 1 ] DEBUG AssetLoader          - Loading from cache: /assets/textures/map_tiles.png
+14:42:20.089 [FXGL Background Thread 1 ] DEBUG AssetLoader          - Loading from cache: /assets/textures/map_tiles.png
+14:42:20.089 [FXGL Background Thread 1 ] DEBUG AssetLoader          - Loading from cache: /assets/textures/map_tiles.png
+14:42:20.089 [FXGL Background Thread 1 ] DEBUG AssetLoader          - Loading from cache: /assets/textures/map_tiles.png
+14:42:20.089 [FXGL Background Thread 1 ] DEBUG AssetLoader          - Loading from cache: /assets/textures/map_tiles.png
+14:42:20.090 [FXGL Background Thread 1 ] DEBUG AssetLoader          - Loading from cache: /assets/textures/map_tiles.png
+14:42:20.090 [FXGL Background Thread 1 ] DEBUG AssetLoader          - Loading from cache: /assets/textures/map_tiles.png
+14:42:20.090 [FXGL Background Thread 1 ] DEBUG AssetLoader          - Loading from cache: /assets/textures/map_tiles.png
+14:42:20.090 [FXGL Background Thread 1 ] DEBUG AssetLoader          - Loading from cache: /assets/textures/map_tiles.png
+14:42:20.090 [FXGL Background Thread 1 ] DEBUG AssetLoader          - Loading from cache: /assets/textures/map_tiles.png
+14:42:20.090 [FXGL Background Thread 1 ] DEBUG AssetLoader          - Loading from cache: /assets/textures/map_tiles.png
+14:42:20.092 [FXGL Background Thread 1 ] DEBUG GameScene            - Creating render group for layer: BACKGROUND(1000)
+14:42:20.135 [FXGL Background Thread 1 ] DEBUG GameScene            - Creating render group for layer: DEFAULT(100000)
+14:42:20.153 [FXGL Background Thread 1 ] DEBUG AssetLoader          - Loading from cache: /assets/textures/Platformer/stand_sheet.png
+14:42:20.154 [FXGL Background Thread 1 ] DEBUG AssetLoader          - Loading from cache: /assets/textures/Platformer/run_sheet.png
+14:42:20.154 [FXGL Background Thread 1 ] DEBUG AssetLoader          - Loading from disk: /assets/textures/Platformer/jump-fall.png
+14:42:20.158 [FXGL Background Thread 1 ] DEBUG AssetLoader          - Loading from disk: /assets/textures/Platformer/jump-up.png
+14:42:20.164 [FXGL Background Thread 1 ] DEBUG InitAppTask          - Initializing Physics
+14:42:20.164 [FXGL Background Thread 1 ] DEBUG InitAppTask          - Initializing UI
+14:42:20.164 [FXGL Background Thread 1 ] DEBUG InitAppTask          - Initialization Complete
+14:42:20.164 [FXGL Background Thread 1 ] INFO  InitAppTask          - Game initialization took: 0.175 sec
+14:42:20.169 [JavaFX Application Thread] DEBUG Input                - Clearing active input actions
+14:42:20.175 [JavaFX Application Thread] DEBUG AppStateMachine      - LoadingState -> PlayState
+14:42:22.122 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/Platformer/run_sheet.png
+14:42:22.138 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/Platformer/run_sheet.png
+14:42:22.154 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/Platformer/run_sheet.png
+14:42:22.170 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/Platformer/run_sheet.png
+14:42:22.185 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/Platformer/run_sheet.png
+14:42:22.201 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/Platformer/run_sheet.png
+14:42:22.217 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/Platformer/run_sheet.png
+14:42:22.233 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/Platformer/run_sheet.png
+14:42:22.249 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/Platformer/run_sheet.png
+14:42:22.265 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/Platformer/run_sheet.png
+14:42:22.281 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/Platformer/run_sheet.png
+14:42:22.297 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/Platformer/run_sheet.png
+14:42:22.313 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/Platformer/run_sheet.png
+14:42:22.329 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/Platformer/run_sheet.png
+14:42:22.345 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/Platformer/run_sheet.png
+14:42:22.377 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/Platformer/run_sheet.png
+14:42:22.393 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/Platformer/run_sheet.png
+14:42:22.409 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/Platformer/run_sheet.png
+14:42:22.425 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/Platformer/run_sheet.png
+14:42:22.441 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/Platformer/run_sheet.png
+14:42:22.457 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/Platformer/run_sheet.png
+14:42:22.473 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/Platformer/run_sheet.png
+14:42:22.489 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/Platformer/run_sheet.png
+14:42:22.506 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/Platformer/run_sheet.png
+14:42:22.522 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/Platformer/run_sheet.png
+14:42:22.538 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/Platformer/run_sheet.png
+14:42:22.554 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/Platformer/run_sheet.png
+14:42:22.569 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/Platformer/run_sheet.png
+14:42:22.585 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/Platformer/run_sheet.png
+14:42:22.601 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/Platformer/run_sheet.png
+14:42:22.617 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/Platformer/run_sheet.png
+14:42:22.633 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/Platformer/run_sheet.png
+14:42:22.649 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/Platformer/run_sheet.png
+14:42:22.665 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/Platformer/run_sheet.png
+14:42:22.681 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/Platformer/run_sheet.png
+14:42:22.697 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/Platformer/run_sheet.png
+14:42:22.713 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/Platformer/run_sheet.png
+14:42:22.729 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/Platformer/run_sheet.png
+14:42:22.745 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/Platformer/run_sheet.png
+14:42:22.777 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/Platformer/run_sheet.png
+14:42:22.793 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/Platformer/run_sheet.png
+14:42:22.809 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/Platformer/run_sheet.png
+14:42:22.825 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/Platformer/run_sheet.png
+14:42:22.841 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/Platformer/run_sheet.png
+14:42:22.858 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/Platformer/run_sheet.png
+14:42:22.874 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/Platformer/run_sheet.png
+14:42:22.890 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/Platformer/run_sheet.png
+14:42:22.906 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/Platformer/run_sheet.png
+14:42:22.922 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/Platformer/run_sheet.png
+14:42:22.938 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/Platformer/run_sheet.png
+14:42:22.953 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/Platformer/run_sheet.png
+14:42:22.969 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/Platformer/run_sheet.png
+14:42:22.985 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/Platformer/run_sheet.png
+14:42:23.001 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/Platformer/run_sheet.png
+14:42:23.017 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/Platformer/run_sheet.png
+14:42:23.033 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/Platformer/run_sheet.png
+14:42:23.049 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/Platformer/run_sheet.png
+14:42:23.065 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/Platformer/run_sheet.png
+14:42:23.081 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/Platformer/run_sheet.png
+14:42:23.097 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/Platformer/run_sheet.png
+14:42:23.113 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/Platformer/run_sheet.png
+14:42:23.129 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/Platformer/run_sheet.png
+14:42:23.145 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/Platformer/run_sheet.png
+14:42:23.177 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/Platformer/run_sheet.png
+14:42:23.193 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/Platformer/run_sheet.png
+14:42:23.209 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/Platformer/run_sheet.png
+14:42:23.225 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/Platformer/run_sheet.png
+14:42:23.242 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/Platformer/run_sheet.png
+14:42:23.258 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/Platformer/run_sheet.png
+14:42:23.274 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/Platformer/run_sheet.png
+14:42:23.290 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/Platformer/run_sheet.png
+14:42:23.305 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/Platformer/run_sheet.png
+14:42:23.321 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/Platformer/run_sheet.png
+14:42:23.337 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/Platformer/run_sheet.png
+14:42:23.353 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/Platformer/run_sheet.png
+14:42:23.369 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/Platformer/run_sheet.png
+14:42:23.385 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/Platformer/run_sheet.png
+14:42:23.401 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/Platformer/run_sheet.png
+14:42:23.417 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/Platformer/run_sheet.png
+14:42:23.865 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/Platformer/run_sheet.png
+14:42:23.881 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/Platformer/run_sheet.png
+14:42:23.897 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/Platformer/run_sheet.png
+14:42:23.913 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/Platformer/run_sheet.png
+14:42:23.929 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/Platformer/run_sheet.png
+14:42:23.945 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/Platformer/run_sheet.png
+14:42:23.978 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/Platformer/run_sheet.png
+14:42:23.994 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/Platformer/run_sheet.png
+14:42:24.010 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/Platformer/run_sheet.png
+14:42:24.026 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/Platformer/run_sheet.png
+14:42:24.042 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/Platformer/run_sheet.png
+14:42:24.058 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/Platformer/run_sheet.png
+14:42:24.073 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/Platformer/run_sheet.png
+14:42:24.089 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/Platformer/run_sheet.png
+14:42:24.105 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/Platformer/run_sheet.png
+14:42:24.121 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/Platformer/run_sheet.png
+14:42:24.137 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/Platformer/run_sheet.png
+14:42:24.153 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/Platformer/run_sheet.png
+14:42:24.169 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/Platformer/run_sheet.png
+14:42:24.185 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/Platformer/run_sheet.png
+14:42:24.201 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/Platformer/run_sheet.png
+14:42:24.217 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/Platformer/run_sheet.png
+14:42:24.233 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/Platformer/run_sheet.png
+14:42:24.249 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/Platformer/run_sheet.png
+14:42:24.265 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/Platformer/run_sheet.png
+14:42:24.281 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/Platformer/run_sheet.png
+14:42:24.297 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/Platformer/run_sheet.png
+14:42:24.313 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/Platformer/run_sheet.png
+14:42:24.329 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/Platformer/run_sheet.png
+14:42:24.345 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/Platformer/run_sheet.png
+14:42:24.362 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/Platformer/run_sheet.png
+14:42:24.378 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/Platformer/run_sheet.png
+14:42:24.410 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/Platformer/run_sheet.png
+14:42:24.426 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/Platformer/run_sheet.png
+14:42:24.441 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/Platformer/run_sheet.png
+14:42:24.457 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/Platformer/run_sheet.png
+14:42:24.473 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/Platformer/run_sheet.png
+14:42:24.489 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/Platformer/run_sheet.png
+14:42:24.505 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/Platformer/run_sheet.png
+14:42:24.521 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/Platformer/run_sheet.png
+14:42:24.537 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/Platformer/run_sheet.png
+14:42:24.553 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/Platformer/run_sheet.png
+14:42:24.569 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/Platformer/run_sheet.png
+14:42:24.585 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/Platformer/run_sheet.png
+14:42:24.601 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/Platformer/run_sheet.png
+14:42:24.617 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/Platformer/run_sheet.png
+14:42:24.633 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/Platformer/run_sheet.png
+14:42:24.649 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/Platformer/run_sheet.png
+14:42:24.665 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/Platformer/run_sheet.png
+14:42:24.681 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/Platformer/run_sheet.png
+14:42:24.697 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/Platformer/run_sheet.png
+14:42:24.713 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/Platformer/run_sheet.png
+14:42:24.729 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/Platformer/run_sheet.png
+14:42:24.746 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/Platformer/run_sheet.png
+14:42:24.762 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/Platformer/run_sheet.png
+14:42:24.778 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/Platformer/run_sheet.png
+14:42:24.809 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/Platformer/run_sheet.png
+14:42:24.825 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/Platformer/run_sheet.png
+14:42:24.841 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/Platformer/run_sheet.png
+14:42:24.857 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/Platformer/run_sheet.png
+14:42:24.873 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/Platformer/run_sheet.png
+14:42:24.889 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/Platformer/run_sheet.png
+14:42:24.905 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/Platformer/run_sheet.png
+14:42:24.921 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/Platformer/run_sheet.png
+14:42:24.937 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/Platformer/run_sheet.png
+14:42:24.953 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/Platformer/run_sheet.png
+14:42:24.969 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/Platformer/run_sheet.png
+14:42:24.985 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/Platformer/run_sheet.png
+14:42:25.002 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/Platformer/run_sheet.png
+14:42:25.017 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/Platformer/run_sheet.png
+14:42:25.033 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/Platformer/run_sheet.png
+14:42:25.049 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/Platformer/run_sheet.png
+14:42:25.065 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/Platformer/run_sheet.png
+14:42:25.081 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/Platformer/run_sheet.png
+14:42:25.097 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/Platformer/run_sheet.png
+14:42:25.114 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/Platformer/run_sheet.png
+14:42:25.130 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/Platformer/run_sheet.png
+14:42:25.146 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/Platformer/run_sheet.png
+14:42:25.162 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/Platformer/run_sheet.png
+14:42:25.177 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/Platformer/run_sheet.png
+14:42:25.209 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/Platformer/run_sheet.png
+14:42:25.225 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/Platformer/run_sheet.png
+14:42:25.241 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/Platformer/run_sheet.png
+14:42:25.257 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/Platformer/run_sheet.png
+14:42:25.273 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/Platformer/run_sheet.png
+14:42:25.289 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/Platformer/run_sheet.png
+14:42:25.305 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/Platformer/run_sheet.png
+14:42:25.321 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/Platformer/run_sheet.png
+14:42:25.337 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/Platformer/run_sheet.png
+14:42:25.353 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/Platformer/run_sheet.png
+14:42:25.369 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/Platformer/run_sheet.png
+14:42:25.385 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/Platformer/run_sheet.png
+14:42:25.401 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/Platformer/run_sheet.png
+14:42:25.417 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/Platformer/run_sheet.png
+14:42:26.025 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/Platformer/run_sheet.png
+14:42:26.041 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/Platformer/run_sheet.png
+14:42:26.057 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/Platformer/run_sheet.png
+14:42:26.073 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/Platformer/run_sheet.png
+14:42:26.089 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/Platformer/run_sheet.png
+14:42:26.105 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/Platformer/run_sheet.png
+14:42:26.121 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/Platformer/run_sheet.png
+14:42:26.137 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/Platformer/run_sheet.png
+14:42:26.153 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/Platformer/run_sheet.png
+14:42:26.169 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/Platformer/run_sheet.png
+14:42:26.185 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/Platformer/run_sheet.png
+14:42:26.201 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/Platformer/run_sheet.png
+14:42:26.217 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/Platformer/run_sheet.png
+14:42:26.234 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/Platformer/run_sheet.png
+14:42:26.250 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/Platformer/run_sheet.png
+14:42:26.266 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/Platformer/run_sheet.png
+14:42:26.282 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/Platformer/run_sheet.png
+14:42:26.298 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/Platformer/run_sheet.png
+14:42:26.313 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/Platformer/run_sheet.png
+14:42:26.329 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/Platformer/run_sheet.png
+14:42:26.345 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/Platformer/run_sheet.png
+14:42:26.361 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/Platformer/run_sheet.png
+14:42:26.634 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/Platformer/run_sheet.png
+14:42:26.650 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/Platformer/run_sheet.png
+14:42:26.666 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/Platformer/run_sheet.png
+14:42:26.682 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/Platformer/run_sheet.png
+14:42:26.697 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/Platformer/run_sheet.png
+14:42:26.713 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/Platformer/run_sheet.png
+14:42:26.729 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/Platformer/run_sheet.png
+14:42:26.745 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/Platformer/run_sheet.png
+14:42:26.761 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/Platformer/run_sheet.png
+14:42:26.777 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/Platformer/run_sheet.png
+14:42:26.809 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/Platformer/run_sheet.png
+14:42:26.825 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/Platformer/run_sheet.png
+14:42:26.841 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/Platformer/run_sheet.png
+14:42:26.857 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/Platformer/run_sheet.png
+14:42:26.873 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/Platformer/run_sheet.png
+14:42:26.889 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/Platformer/run_sheet.png
+14:42:26.905 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/Platformer/run_sheet.png
+14:42:26.921 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/Platformer/run_sheet.png
+14:42:26.937 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/Platformer/run_sheet.png
+14:42:26.953 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/Platformer/run_sheet.png
+14:42:26.969 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/Platformer/run_sheet.png
+14:42:26.986 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/Platformer/run_sheet.png
+14:42:27.002 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/Platformer/run_sheet.png
+14:42:27.018 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/Platformer/run_sheet.png
+14:42:27.034 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/Platformer/run_sheet.png
+14:42:27.050 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/Platformer/run_sheet.png
+14:42:27.065 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/Platformer/run_sheet.png
+14:42:27.081 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/Platformer/run_sheet.png
+14:42:27.097 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/Platformer/run_sheet.png
+14:42:27.113 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/Platformer/run_sheet.png
+14:42:27.129 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/Platformer/run_sheet.png
+14:42:27.145 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/Platformer/run_sheet.png
+14:42:27.161 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/Platformer/run_sheet.png
+14:42:27.177 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/Platformer/run_sheet.png
+14:42:27.577 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/Platformer/run_sheet.png
+14:42:27.593 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/Platformer/run_sheet.png
+14:42:27.625 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/Platformer/run_sheet.png
+14:42:27.641 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/Platformer/run_sheet.png
+14:42:27.657 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/Platformer/run_sheet.png
+14:42:27.673 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/Platformer/run_sheet.png
+14:42:27.689 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/Platformer/run_sheet.png
+14:42:27.705 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/Platformer/run_sheet.png
+14:42:27.721 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/Platformer/run_sheet.png
+14:42:27.738 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/Platformer/run_sheet.png
+14:42:27.754 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/Platformer/run_sheet.png
+14:42:27.770 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/Platformer/run_sheet.png
+14:42:27.786 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/Platformer/run_sheet.png
+14:42:27.802 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/Platformer/run_sheet.png
+14:42:27.817 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/Platformer/run_sheet.png
+14:42:27.834 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/Platformer/run_sheet.png
+14:42:27.849 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/Platformer/run_sheet.png
+14:42:27.865 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/Platformer/run_sheet.png
+14:42:27.881 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/Platformer/run_sheet.png
+14:42:27.897 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/Platformer/run_sheet.png
+14:42:27.913 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/Platformer/run_sheet.png
+14:42:27.929 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/Platformer/run_sheet.png
+14:42:27.945 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/Platformer/run_sheet.png
+14:42:27.961 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/Platformer/run_sheet.png
+14:42:27.977 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/Platformer/run_sheet.png
+14:42:27.993 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/Platformer/run_sheet.png
+14:42:28.025 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/Platformer/run_sheet.png
+14:42:28.041 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/Platformer/run_sheet.png
+14:42:28.057 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/Platformer/run_sheet.png
+14:42:28.073 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/Platformer/run_sheet.png
+14:42:28.089 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/Platformer/run_sheet.png
+14:42:28.106 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/Platformer/run_sheet.png
+14:42:28.122 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/Platformer/run_sheet.png
+14:42:28.138 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/Platformer/run_sheet.png
+14:42:28.154 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/Platformer/run_sheet.png
+14:42:28.170 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/Platformer/run_sheet.png
+14:42:28.185 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/Platformer/run_sheet.png
+14:42:28.201 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/Platformer/run_sheet.png
+14:42:28.217 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/Platformer/run_sheet.png
+14:42:28.233 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/Platformer/run_sheet.png
+14:42:28.249 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/Platformer/run_sheet.png
+14:42:28.265 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/Platformer/run_sheet.png
+14:42:28.281 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/Platformer/run_sheet.png
+14:42:28.297 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/Platformer/run_sheet.png
+14:42:28.313 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/Platformer/run_sheet.png
+14:42:28.329 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/Platformer/run_sheet.png
+14:42:28.345 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/Platformer/run_sheet.png
+14:42:28.361 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/Platformer/run_sheet.png
+14:42:28.377 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/Platformer/run_sheet.png
+14:42:28.393 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/Platformer/run_sheet.png
+14:42:28.425 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/Platformer/run_sheet.png
+14:42:28.441 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/Platformer/run_sheet.png
+14:42:28.457 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/Platformer/run_sheet.png
+14:42:28.474 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/Platformer/run_sheet.png
+14:42:28.490 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/Platformer/run_sheet.png
+14:42:28.506 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/Platformer/run_sheet.png
+14:42:28.522 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/Platformer/run_sheet.png
+14:42:28.537 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/Platformer/run_sheet.png
+14:42:28.553 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/Platformer/run_sheet.png
+14:42:28.569 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/textures/Platformer/run_sheet.png
+14:42:30.628 [JavaFX Application Thread] DEBUG GameApplication      - Exiting game application
+14:42:30.629 [JavaFX Application Thread] DEBUG GameApplication      - Shutting down background threads
+14:42:30.629 [JavaFX Application Thread] DEBUG GameApplication      - Exiting FXGL
+14:42:30.629 [JavaFX Application Thread] DEBUG FXGL                 - Saving FXGL system data
+14:42:30.631 [JavaFX Application Thread] DEBUG DesktopFSService     - Writing to: system\fxgl.bundle
+14:42:30.635 [JavaFX Application Thread] DEBUG GameApplication      - Closing logger and exiting JavaFX

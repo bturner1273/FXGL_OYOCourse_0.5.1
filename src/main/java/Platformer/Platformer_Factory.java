@@ -1,5 +1,6 @@
 package Platformer;
 
+import com.almasb.fxgl.app.FXGL;
 import com.almasb.fxgl.entity.Entities;
 import com.almasb.fxgl.entity.Entity;
 import com.almasb.fxgl.entity.EntityFactory;
@@ -74,12 +75,17 @@ public class Platformer_Factory implements EntityFactory {
 		pic.setScaleX(.25);
 		pic.setScaleY(.25);
 		
+		AnimatedTexture run = new AnimatedTexture(new AnimationChannel("Platformer/run_sheet.png", 5, 1535/5, 445, Duration.millis(500), 0, 4));
+		run.setScaleX(.25);
+		run.setScaleY(.25);
+		
 		PlatformerAnimationComponent jump = new PlatformerAnimationComponent();
 		jump.setJumpDownImage("Platformer/jump-fall.png");
 		jump.setJumpUpImage("Platformer/jump-up.png");
 		jump.setIdleImage(pic);
+		jump.setRunImage(run);
 		jump.setMinRunSpeed(10);
-		jump.setScale(.25);
+		jump.setScaleAll(.25);
 		
 		PhysicsComponent physics = new PhysicsComponent();
 		BodyDef bd = new BodyDef();
